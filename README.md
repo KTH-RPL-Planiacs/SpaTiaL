@@ -23,7 +23,6 @@ sudo apt install mona
     ```
 3. Install the dependencies necessary to run and test the code:
     ```
-    $ cd code
     $ pip install -r requirements.txt
     ```
 
