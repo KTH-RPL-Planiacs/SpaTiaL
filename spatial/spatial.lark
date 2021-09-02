@@ -1,0 +1,62 @@
+?start: temp                        ->temporal
+
+?temp: spat                                 -> spatial
+      | temp ("and"|"&") temp               -> and_
+      | temp ("or"|"|") temp                -> or_
+      | temp "xor" temp                     -> xor_
+      | "(" ("not_t"|"!t"|"!") temp ")"     -> not_
+      | temp ("->t"|"implies_t") temp       -> implies_
+      | "(" "X" temp ")"                    -> next
+      | "(" temp "U" temp ")"               -> until
+      | "(" temp "U" bound temp ")"         -> until_bounded
+      | "(" "G" temp ")"                    -> always
+      | "(" "G" bound temp ")"              -> always_bounded
+      | "(" "F" temp ")"                    -> eventually
+      | "(" "F" bound temp ")"              -> eventually_bounded
+      | "(" temp ")"
+
+?bound: "[" num "," num "]"
+
+?spat: "(" rel_bin ")"
+      | spat ("and"|"&") spat       -> and_
+      | spat ("or"|"|") spat        -> or_
+      | spat "xor" spat             -> xor_
+      | spat ("->"|"implies") spat  -> implies_
+      | "(" ("not"|"!") spat ")"    -> not_
+      | "(" spat ")"
+
+?rel_bin:   atom "leftof" atom    -> left_of
+      | atom "rightof" atom   -> right_of
+      | atom "below" atom     -> below_of
+      | atom "above" atom     -> above_of
+      | atom "ovlp" atom      -> overlap
+      | atom "enclosedin" atom -> enclosed_in
+      | atom "touch" atom     -> touching
+      | atom "farfrom" atom   -> far_from
+      | atom "closeto" atom   -> close_to
+      | atom "closer" comparison -> closer_to
+      | atom "dist" atom operator num -> distance
+      | atom "moved" atom   -> moved
+
+
+
+
+?operator: OP  -> operator
+OP: "<=" | ">=" | "=="
+
+?comparison: atom "than" atom -> comparison
+
+
+
+?atom: NAME                -> var
+     | NAME "[-" num "]"    -> var_at
+     | "enlarge" "(" atom "," num ")" -> enlarge
+
+?num: NUMBER                -> number
+     | NAME                 -> numeric_var
+
+%import common.CNAME        -> NAME
+%import common.NUMBER
+%import common.WS_INLINE
+
+%ignore WS_INLINE

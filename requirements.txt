@@ -1,0 +1,11 @@
+pybullet
+numpy
+matplotlib
+scipy
+open3d>=0.10.0
+pupil-apriltags
+lark-parser
+ltlf2dfa
+networkx
+shapely
+pybullet
