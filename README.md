@@ -1,6 +1,6 @@
 # SpaTiaL
 
-SpaTiaL is a logical language and tool to specify spatial and temporal relations between objects.
+SpaTiaL is a framework to specify spatial and temporal relations between objects.
 
 ## Installation
 
