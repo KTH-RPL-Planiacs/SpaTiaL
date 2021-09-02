@@ -31,7 +31,7 @@
 		<link href="https://kth-rpl-planiacs.github.io/SpaTiaL/docs/help/faq/" type="text/html"/>
 		<id>https://kth-rpl-planiacs.github.io/SpaTiaL/docs/help/faq/</id>
 		<content type="html">&lt;h2 id=&quot;what-is-spatial&quot;&gt;What is SpaTiaL?&lt;&#x2F;h2&gt;
-&lt;p&gt;SpaTiaL is a language and tool to specify spatial and temporal relations between objects. TODO&lt;&#x2F;p&gt;
+&lt;p&gt;SpaTiaL is a framework to specify spatial and temporal relations between objects. TODO&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;even-more-questions&quot;&gt;Even more questions?&lt;&#x2F;h2&gt;
 &lt;p&gt;Send TODO an E-mail:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -179,10 +179,10 @@ at &lt;a href=&quot;https:&#x2F;&#x2F;www.contributor-covenant.org&#x2F;translat
 		<link href="https://kth-rpl-planiacs.github.io/SpaTiaL/docs/contributing/how-to-contribute/" type="text/html"/>
 		<id>https://kth-rpl-planiacs.github.io/SpaTiaL/docs/contributing/how-to-contribute/</id>
 		<content type="html">&lt;p&gt;👉 Make sure to read the &lt;a href=&quot;..&#x2F;code-of-conduct&#x2F;&quot;&gt;Code of Conduct&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;👉 The code can be found in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rpl-planiacs&#x2F;SpaTiaL&quot;&gt;&lt;code&gt;SpaTiaL&lt;&#x2F;code&gt; repository&lt;&#x2F;a&gt; TODO&lt;&#x2F;p&gt;
-&lt;p&gt;👉 If you have a cool example or showcase of SpaTiaL in use, let me know so your work can be highlighted!&lt;&#x2F;p&gt;
+&lt;p&gt;👉 The code can be found in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;KTH-RPL-Planiacs&#x2F;SpaTiaL&quot;&gt;SpaTiaL repository&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;👉 If you have an example or showcase of SpaTiaL in use, let us know so your work can be highlighted!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;create-an-issue&quot;&gt;Create an issue&lt;&#x2F;h2&gt;
-&lt;p&gt;TODO&lt;&#x2F;p&gt;
+&lt;p&gt;If you encounter a problem with the framework, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;KTH-RPL-Planiacs&#x2F;SpaTiaL&#x2F;issues&quot;&gt;let us know by creating an issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;contribute-to-spatial&quot;&gt;Contribute to SpaTiaL&lt;&#x2F;h2&gt;
 &lt;p&gt;Please send a GitHub Pull Request with a clear list of what you&#x27;ve done (read more about &lt;a href=&quot;http:&#x2F;&#x2F;help.github.com&#x2F;pull-requests&#x2F;&quot;&gt;pull requests&lt;&#x2F;a&gt;). When you send a pull request, it would be great if you wrote unit- or integration tests for your changes.&lt;&#x2F;p&gt;
 &lt;p&gt;Make sure all of your commits are atomic (one feature per commit) and always write a clear log message for your commits. One-line messages are fine for small changes, but bigger changes should look like this:&lt;&#x2F;p&gt;
