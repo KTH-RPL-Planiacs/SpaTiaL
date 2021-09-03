@@ -1,0 +1,1224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>spatial.automaton_planning API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spatial.automaton_planning</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from copy import deepcopy
+
+import networkx as nx
+
+from spatial.logic import Spatial
+from spatial.ltlf2dfa_nx import LTLf2nxParser
+
+
+def number_to_base(n, b):
+    &#34;&#34;&#34;
+    translates a decimal number to a different base in a list of digits
+    Args:
+        n: the decimal number
+        b: the new base
+    Returns:
+        A list of digits in the new base
+    &#34;&#34;&#34;
+    if n == 0:
+        return [0]
+    digits = []
+    while n:
+        digits.append(int(n % b))
+        n //= b
+    return digits[::-1]
+
+
+def sog_fits_to_guard(guard, sog, guard_ap, sog_ap):
+    &#34;&#34;&#34;
+    checks if a guard fits to a set of guards, including undecided bits denoted as X
+    Args:
+        guard: A single guard. Example &#39;X01&#39;
+        sog: A set of guards Example {&#39;001&#39;,&#39;101&#39;}
+        guard_ap: atomic propositions of the guard
+        sog_ap: atomic propositions of the set of guards
+    Returns:
+        A subset of the set of guards matching to the single guard
+    &#34;&#34;&#34;
+
+    guards = deepcopy(sog)
+
+    # check if this guard fits to one of the guards
+    for i, g_value in enumerate(guard):
+        if g_value == &#39;X&#39;:
+            continue
+        if guard_ap[i] in sog_ap:
+            j = sog_ap.index(guard_ap[i])
+            wrong_guards = []
+            for guard in guards:
+                if guard[j] != &#39;X&#39; and guard[j] != g_value:
+                    # if a synth guard is not matching to the current config, mark for removal
+                    wrong_guards.append(guard)
+            # remove marked guards
+            for wg in wrong_guards:
+                guards.remove(wg)
+
+    return guards
+
+
+def flip_guard_bit(guard, bit, skip_ones=False):
+    # construct hypothetical test_guard
+    test_guard = list(guard)
+    if guard[bit] == &#39;1&#39;:
+        if skip_ones:
+            test_guard[bit] = &#39;1&#39;
+        else:
+            test_guard[bit] = &#39;0&#39;
+    elif guard[bit] == &#39;0&#39;:
+        test_guard[bit] = &#39;1&#39;
+    elif guard[bit] == &#39;X&#39;:
+        test_guard[bit] = &#39;X&#39;
+    test_guard = &#39;&#39;.join(test_guard)
+    return test_guard
+
+
+def replace_guard_bit(guard, bit, lit):
+    new_guard = list(guard)
+    new_guard[bit] = lit
+    new_guard = &#39;&#39;.join(new_guard)
+    return new_guard
+
+
+def resolve_all_x(guard):
+    return_set = set()
+    for i, o in enumerate(guard):
+        if o == &#39;X&#39;:
+            return_set = return_set.union(resolve_all_x(replace_guard_bit(guard, i, &#39;0&#39;)))
+            return_set = return_set.union(resolve_all_x(replace_guard_bit(guard, i, &#39;1&#39;)))
+
+    if len(return_set) == 0:
+        return_set.add(guard)
+    return return_set
+
+
+def compare_obs(test_obs, existing_obs):
+    if len(test_obs) != len(existing_obs):
+        return False
+
+    for i in range(len(test_obs)):
+        if test_obs[i] == &#39;X&#39; and existing_obs[i] == &#39;X&#39;:
+            continue
+        if test_obs[i] != existing_obs[i]:
+            return False
+
+    return True
+
+
+def reduce_set_of_guards(sog):
+    # first, resolve all generalizations
+    new_sog = set()
+    for g in sog:
+        new_sog = new_sog.union(resolve_all_x(g))
+    changed = True
+    # blow up the set of guards with all possible generalizations
+    while changed:
+        blown_up_sog = set(new_sog)
+        for guard in new_sog:  # for each guard
+            for i, o in enumerate(guard):  # for each bit in the guard
+                # construct hypothetical test_guard
+                test_guard = flip_guard_bit(guard, i)
+
+                # check if the test_guard and the guard are different (they are not if &#39;X&#39; got &#34;flipped&#34;)
+                if test_guard == guard:
+                    continue
+
+                # if the hypothetical guard is not also in the new sog, we cannot reduce
+                test_guard_in_new_sog = False
+                for g in new_sog:
+                    if compare_obs(test_guard, g):
+                        test_guard_in_new_sog = True
+                if not test_guard_in_new_sog:
+                    continue
+
+                # create a reduced guard
+                reduced_guard = replace_guard_bit(guard, i, &#39;X&#39;)
+                # add it to the reduced sog
+                blown_up_sog.add(reduced_guard)
+
+        if new_sog == blown_up_sog:
+            changed = False
+
+        new_sog = blown_up_sog
+
+    # sog is all blown up with all possible generalizations
+    unnecessary_guards = set()
+    for guard in new_sog:
+        for other_guard in new_sog:
+            # skip yourself
+            if guard == other_guard:
+                continue
+
+            # check if the guard subsumes the other_guard
+            subsumes = True
+            for j in range(len(guard)):
+                if guard[j] == &#39;X&#39;:
+                    continue
+                if other_guard[j] == &#39;X&#39;:
+                    subsumes = False
+                if not guard[j] == other_guard[j]:
+                    subsumes = False
+            if subsumes:
+                unnecessary_guards.add(other_guard)
+
+    return new_sog.difference(unnecessary_guards)
+
+
+class AutomatonPlanner:
+    &#34;&#34;&#34;
+    Enables online automaton-based planning of the temporal aspects.
+    &#34;&#34;&#34;
+
+    def __init__(self):
+        &#34;&#34;&#34;
+        Initializes the AutomatonPlanner
+        &#34;&#34;&#34;
+        self.ltlf_parser = LTLf2nxParser()
+
+        self.spatial_dict = {}
+        self.next_free_variable_id = 0
+
+        self.temporal_formula = None
+        self.dfa = None
+        self.current_state = None
+
+    def currently_accepting(self):
+        &#34;&#34;&#34;
+        Returns True if the current state is accepting
+        &#34;&#34;&#34;
+        return self.current_state in self.dfa.graph[&#39;acc&#39;]
+
+    def reset_state(self):
+        &#34;&#34;&#34;
+        Resets the current state to the initial state
+        &#34;&#34;&#34;
+        self.current_state = self.dfa.graph[&#39;init&#39;]
+
+    def simulate_trace(self, trace, ap):
+        &#34;&#34;&#34;
+        Simulates a run on the automaton, given some inputs and updates the state accordingly
+
+        Args:
+            trace: The input trace
+            ap: the input atomic propositions
+        &#34;&#34;&#34;
+        self.reset_state()
+        for symbol in trace:
+            self.dfa_step(symbol, ap)
+        return self.current_state in self.dfa.graph[&#39;acc&#39;]
+
+    def dfa_step(self, symbol, ap):
+        &#34;&#34;&#34;
+        Executes a single step of the automaton
+
+        Args:
+            symbol: The input symbol
+            ap: the input atomic propositions
+        &#34;&#34;&#34;
+        assert isinstance(symbol, str), &#39;Symbol is of wrong type, should be str! %s&#39; % type(symbol)
+        for succ in self.dfa.successors(self.current_state):
+            # directly applying the first edge that fits works because the dfa is deterministic!
+            if sog_fits_to_guard(symbol, self.dfa.edges[self.current_state, succ][&#39;guard&#39;], ap, self.dfa.graph[&#39;ap&#39;]):
+                self.current_state = succ
+                break
+
+    def plan_step(self):
+        &#34;&#34;&#34;
+        Returns the desired transition and a selfloop to maintain current state
+        based on the shortest path to any accepting state.
+
+        Returns:
+            target_next_edge, self_loop_constraint, edge: If no path exists, target_next_edge is None.
+            If target_next_edge is a self-loop (holding accepting state), self_loop_constraint is None.
+            edge refers to the targeted edge in the DFA and can be used as a reference for pruning.
+        &#34;&#34;&#34;
+        if self.current_state in self.dfa.graph[&#39;acc&#39;]:
+            # if we are in an accepting state, hold it!
+            return self.dfa.edges[self.current_state, self.current_state][&#39;guard&#39;], None, None
+
+        # find shortest path to all accepting states
+        targets = {}
+        path_exists = False
+        for acc_node in self.dfa.graph[&#39;acc&#39;]:
+            try:
+                targets[acc_node] = nx.shortest_path(self.dfa, source=self.current_state, target=acc_node)
+                path_exists = True
+            except nx.exception.NetworkXNoPath:
+                targets[acc_node] = float(&#39;inf&#39;)
+
+        if not path_exists:
+            return None, None, None
+
+        # find the closest reachable accepting state
+        target = min(targets.items(), key=lambda x: len(x[1]))
+        target_path = target[1]
+        target_next_guards = self.dfa.edges[self.current_state, target_path[1]][&#39;guard&#39;]
+        target_constraint_guards = []
+        for succ in self.dfa.successors(self.current_state):
+            if succ != target_path[1] and succ != self.current_state:
+                target_constraint_guards.extend(self.dfa.edges[self.current_state, succ][&#39;guard&#39;])
+        return reduce_set_of_guards(target_next_guards), reduce_set_of_guards(target_constraint_guards), (self.current_state, target_path[1])
+
+    def tree_to_dfa(self, tree):
+        &#34;&#34;&#34;
+        Converts a SpaTiaL tree to a DFA.
+        Args:
+            tree: input tree parsed by spatial lark parser
+        &#34;&#34;&#34;
+        self.temporal_formula = self.extract_temporal(tree)
+        self.ltlf_parser.parse_formula(self.temporal_formula)
+        self.dfa = self.ltlf_parser.to_nxgraph()
+
+    def get_next_variable_string(self):
+        &#34;&#34;&#34;
+        Creates a new, unique variable name.
+
+        Returns: the variable string
+        &#34;&#34;&#34;
+        id_base_26 = number_to_base(self.next_free_variable_id, 26)
+        letters = [chr(n + ord(&#39;a&#39;)) for n in id_base_26]
+        self.next_free_variable_id += 1
+        return &#39;&#39;.join(letters)
+
+    def extract_temporal(self, tree):
+        &#34;&#34;&#34;
+        Takes a parsed tree and extracts an LTLf formula, creating variables for each &#34;spatial&#34;-type subtree.
+        Keeps dictionaries for mappings between subtrees and variable names.
+
+        Args:
+            tree: input tree parsed by spatial lark parser
+
+        Returns:
+            LTLf formula represented as a string.
+        &#34;&#34;&#34;
+        f = &#39;&#39;
+
+        if tree.data == &#39;temporal&#39;:
+            f += self.extract_temporal(tree.children[0])
+        elif tree.data == &#39;always&#39;:
+            f += &#39;G(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+        elif tree.data == &#39;eventually&#39;:
+            f += &#39;F(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+        elif tree.data == &#39;until&#39;:
+            f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) U (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+        elif tree.data == &#39;and_&#39;:
+            f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) &amp; (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+        elif tree.data == &#39;or_&#39;:
+            f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) | (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+        elif tree.data == &#39;not_&#39;:
+            f += &#39;!(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+        elif tree.data == &#39;implies_&#39;:
+            f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) -&gt; (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+        elif tree.data == &#39;spatial&#39;:
+            element = hash(tree)  # compute hash once
+            # map hash to variable name and tree
+            if element not in self.spatial_dict.keys():
+                variable_string = self.get_next_variable_string()
+                self.spatial_dict[element] = {
+                    &#39;variable&#39;: variable_string,
+                    &#39;tree&#39;: tree
+                }
+            f += self.spatial_dict[element][&#39;variable&#39;]
+        else:
+            assert False, &#39;Operator %s not implemented for automaton-based planning!&#39; % tree.data
+
+        return f
+
+    def get_variable_to_tree_dict(self):
+        &#34;&#34;&#34;
+        Returns:
+            A mapping between temporal variable name and associated spatial tree.
+        &#34;&#34;&#34;
+        return_dict = {}
+
+        for val in self.spatial_dict.values():
+            return_dict[val[&#39;variable&#39;]] = val[&#39;tree&#39;]
+
+        return return_dict
+
+    def get_dfa_ap(self):
+        &#34;&#34;&#34;
+        Returns:
+             The atomic propositions of the DFA.
+        &#34;&#34;&#34;
+        return self.dfa.graph[&#39;ap&#39;]
+
+
+if __name__ == &#39;__main__&#39;:
+    spatial = Spatial()
+    planner = AutomatonPlanner()
+
+    # parse the formula
+    ex = &#34;( (G(!(blue touch red))) &amp; (F(blue touch green)) )&#34;
+    ex_tree = spatial.parse(ex)  # build the usual tree
+    planner.tree_to_dfa(ex_tree)  # transform the tree into an automaton
+
+    # print the corresponding LTLf formula
+    print(planner.temporal_formula)
+
+    # this dictionary contains a variable name to spatial tree mapping
+    print(planner.get_variable_to_tree_dict())
+
+    # you have to define in which order you pass variable assignments
+    trace_ap = [&#39;a&#39;, &#39;b&#39;]
+
+    # example traces (sequences of observations)
+    ex_trace_acc = [&#39;10&#39;, &#39;10&#39;, &#39;10&#39;, &#39;11&#39;]
+    ex_trace_rej = [&#39;10&#39;, &#39;00&#39;, &#39;10&#39;, &#39;01&#39;]
+
+    # the automaton can evaluate such traces
+    print(&#39;Trace 1 is&#39;, planner.simulate_trace(ex_trace_acc, trace_ap))
+    print(&#39;Trace 2 is&#39;, planner.simulate_trace(ex_trace_rej, trace_ap))
+
+    # INTERACTIVE PLANNING EXAMPLE
+    # resets the automaton current state to the initial state
+    planner.reset_state()
+
+    # before you ask anything from the automaton, provide a initial observation
+    planner.dfa_step(&#39;10&#39;, trace_ap)
+
+    # planning loop
+    print(&#39;&#39;)
+    print(&#39;INTERACTIVE EXAMPLE&#39;)
+    print(&#39;&#39;)
+    print(&#39;enter observations in order&#39;, planner.get_dfa_ap(), &#39;or enter \&#39;exit\&#39; to exit&#39;)
+    while True:
+
+        target_set, constraint_set, _ = planner.plan_step()
+        print(&#39;Currently accepting:&#39;, planner.currently_accepting())
+        if target_set:
+            print(&#39;Next step: Reach&#39;, target_set, planner.get_dfa_ap(),
+                  &#39;, never satisfy&#39;, constraint_set, planner.get_dfa_ap())
+        else:
+            print(&#39;No path exists!&#39;)
+        obs = input(&#39;Next Observation:&#39;)
+        if obs == &#39;exit&#39;:
+            break
+        planner.dfa_step(obs, planner.get_dfa_ap())</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spatial.automaton_planning.compare_obs"><code class="name flex">
+<span>def <span class="ident">compare_obs</span></span>(<span>test_obs, existing_obs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compare_obs(test_obs, existing_obs):
+    if len(test_obs) != len(existing_obs):
+        return False
+
+    for i in range(len(test_obs)):
+        if test_obs[i] == &#39;X&#39; and existing_obs[i] == &#39;X&#39;:
+            continue
+        if test_obs[i] != existing_obs[i]:
+            return False
+
+    return True</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.flip_guard_bit"><code class="name flex">
+<span>def <span class="ident">flip_guard_bit</span></span>(<span>guard, bit, skip_ones=False)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def flip_guard_bit(guard, bit, skip_ones=False):
+    # construct hypothetical test_guard
+    test_guard = list(guard)
+    if guard[bit] == &#39;1&#39;:
+        if skip_ones:
+            test_guard[bit] = &#39;1&#39;
+        else:
+            test_guard[bit] = &#39;0&#39;
+    elif guard[bit] == &#39;0&#39;:
+        test_guard[bit] = &#39;1&#39;
+    elif guard[bit] == &#39;X&#39;:
+        test_guard[bit] = &#39;X&#39;
+    test_guard = &#39;&#39;.join(test_guard)
+    return test_guard</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.number_to_base"><code class="name flex">
+<span>def <span class="ident">number_to_base</span></span>(<span>n, b)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>translates a decimal number to a different base in a list of digits</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>n</code></strong></dt>
+<dd>the decimal number</dd>
+<dt><strong><code>b</code></strong></dt>
+<dd>the new base</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A list of digits in the new base</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def number_to_base(n, b):
+    &#34;&#34;&#34;
+    translates a decimal number to a different base in a list of digits
+    Args:
+        n: the decimal number
+        b: the new base
+    Returns:
+        A list of digits in the new base
+    &#34;&#34;&#34;
+    if n == 0:
+        return [0]
+    digits = []
+    while n:
+        digits.append(int(n % b))
+        n //= b
+    return digits[::-1]</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.reduce_set_of_guards"><code class="name flex">
+<span>def <span class="ident">reduce_set_of_guards</span></span>(<span>sog)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def reduce_set_of_guards(sog):
+    # first, resolve all generalizations
+    new_sog = set()
+    for g in sog:
+        new_sog = new_sog.union(resolve_all_x(g))
+    changed = True
+    # blow up the set of guards with all possible generalizations
+    while changed:
+        blown_up_sog = set(new_sog)
+        for guard in new_sog:  # for each guard
+            for i, o in enumerate(guard):  # for each bit in the guard
+                # construct hypothetical test_guard
+                test_guard = flip_guard_bit(guard, i)
+
+                # check if the test_guard and the guard are different (they are not if &#39;X&#39; got &#34;flipped&#34;)
+                if test_guard == guard:
+                    continue
+
+                # if the hypothetical guard is not also in the new sog, we cannot reduce
+                test_guard_in_new_sog = False
+                for g in new_sog:
+                    if compare_obs(test_guard, g):
+                        test_guard_in_new_sog = True
+                if not test_guard_in_new_sog:
+                    continue
+
+                # create a reduced guard
+                reduced_guard = replace_guard_bit(guard, i, &#39;X&#39;)
+                # add it to the reduced sog
+                blown_up_sog.add(reduced_guard)
+
+        if new_sog == blown_up_sog:
+            changed = False
+
+        new_sog = blown_up_sog
+
+    # sog is all blown up with all possible generalizations
+    unnecessary_guards = set()
+    for guard in new_sog:
+        for other_guard in new_sog:
+            # skip yourself
+            if guard == other_guard:
+                continue
+
+            # check if the guard subsumes the other_guard
+            subsumes = True
+            for j in range(len(guard)):
+                if guard[j] == &#39;X&#39;:
+                    continue
+                if other_guard[j] == &#39;X&#39;:
+                    subsumes = False
+                if not guard[j] == other_guard[j]:
+                    subsumes = False
+            if subsumes:
+                unnecessary_guards.add(other_guard)
+
+    return new_sog.difference(unnecessary_guards)</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.replace_guard_bit"><code class="name flex">
+<span>def <span class="ident">replace_guard_bit</span></span>(<span>guard, bit, lit)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def replace_guard_bit(guard, bit, lit):
+    new_guard = list(guard)
+    new_guard[bit] = lit
+    new_guard = &#39;&#39;.join(new_guard)
+    return new_guard</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.resolve_all_x"><code class="name flex">
+<span>def <span class="ident">resolve_all_x</span></span>(<span>guard)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def resolve_all_x(guard):
+    return_set = set()
+    for i, o in enumerate(guard):
+        if o == &#39;X&#39;:
+            return_set = return_set.union(resolve_all_x(replace_guard_bit(guard, i, &#39;0&#39;)))
+            return_set = return_set.union(resolve_all_x(replace_guard_bit(guard, i, &#39;1&#39;)))
+
+    if len(return_set) == 0:
+        return_set.add(guard)
+    return return_set</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.sog_fits_to_guard"><code class="name flex">
+<span>def <span class="ident">sog_fits_to_guard</span></span>(<span>guard, sog, guard_ap, sog_ap)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>checks if a guard fits to a set of guards, including undecided bits denoted as X</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>guard</code></strong></dt>
+<dd>A single guard. Example 'X01'</dd>
+<dt><strong><code>sog</code></strong></dt>
+<dd>A set of guards Example {'001','101'}</dd>
+<dt><strong><code>guard_ap</code></strong></dt>
+<dd>atomic propositions of the guard</dd>
+<dt><strong><code>sog_ap</code></strong></dt>
+<dd>atomic propositions of the set of guards</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A subset of the set of guards matching to the single guard</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def sog_fits_to_guard(guard, sog, guard_ap, sog_ap):
+    &#34;&#34;&#34;
+    checks if a guard fits to a set of guards, including undecided bits denoted as X
+    Args:
+        guard: A single guard. Example &#39;X01&#39;
+        sog: A set of guards Example {&#39;001&#39;,&#39;101&#39;}
+        guard_ap: atomic propositions of the guard
+        sog_ap: atomic propositions of the set of guards
+    Returns:
+        A subset of the set of guards matching to the single guard
+    &#34;&#34;&#34;
+
+    guards = deepcopy(sog)
+
+    # check if this guard fits to one of the guards
+    for i, g_value in enumerate(guard):
+        if g_value == &#39;X&#39;:
+            continue
+        if guard_ap[i] in sog_ap:
+            j = sog_ap.index(guard_ap[i])
+            wrong_guards = []
+            for guard in guards:
+                if guard[j] != &#39;X&#39; and guard[j] != g_value:
+                    # if a synth guard is not matching to the current config, mark for removal
+                    wrong_guards.append(guard)
+            # remove marked guards
+            for wg in wrong_guards:
+                guards.remove(wg)
+
+    return guards</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="spatial.automaton_planning.AutomatonPlanner"><code class="flex name class">
+<span>class <span class="ident">AutomatonPlanner</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enables online automaton-based planning of the temporal aspects.</p>
+<p>Initializes the AutomatonPlanner</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AutomatonPlanner:
+    &#34;&#34;&#34;
+    Enables online automaton-based planning of the temporal aspects.
+    &#34;&#34;&#34;
+
+    def __init__(self):
+        &#34;&#34;&#34;
+        Initializes the AutomatonPlanner
+        &#34;&#34;&#34;
+        self.ltlf_parser = LTLf2nxParser()
+
+        self.spatial_dict = {}
+        self.next_free_variable_id = 0
+
+        self.temporal_formula = None
+        self.dfa = None
+        self.current_state = None
+
+    def currently_accepting(self):
+        &#34;&#34;&#34;
+        Returns True if the current state is accepting
+        &#34;&#34;&#34;
+        return self.current_state in self.dfa.graph[&#39;acc&#39;]
+
+    def reset_state(self):
+        &#34;&#34;&#34;
+        Resets the current state to the initial state
+        &#34;&#34;&#34;
+        self.current_state = self.dfa.graph[&#39;init&#39;]
+
+    def simulate_trace(self, trace, ap):
+        &#34;&#34;&#34;
+        Simulates a run on the automaton, given some inputs and updates the state accordingly
+
+        Args:
+            trace: The input trace
+            ap: the input atomic propositions
+        &#34;&#34;&#34;
+        self.reset_state()
+        for symbol in trace:
+            self.dfa_step(symbol, ap)
+        return self.current_state in self.dfa.graph[&#39;acc&#39;]
+
+    def dfa_step(self, symbol, ap):
+        &#34;&#34;&#34;
+        Executes a single step of the automaton
+
+        Args:
+            symbol: The input symbol
+            ap: the input atomic propositions
+        &#34;&#34;&#34;
+        assert isinstance(symbol, str), &#39;Symbol is of wrong type, should be str! %s&#39; % type(symbol)
+        for succ in self.dfa.successors(self.current_state):
+            # directly applying the first edge that fits works because the dfa is deterministic!
+            if sog_fits_to_guard(symbol, self.dfa.edges[self.current_state, succ][&#39;guard&#39;], ap, self.dfa.graph[&#39;ap&#39;]):
+                self.current_state = succ
+                break
+
+    def plan_step(self):
+        &#34;&#34;&#34;
+        Returns the desired transition and a selfloop to maintain current state
+        based on the shortest path to any accepting state.
+
+        Returns:
+            target_next_edge, self_loop_constraint, edge: If no path exists, target_next_edge is None.
+            If target_next_edge is a self-loop (holding accepting state), self_loop_constraint is None.
+            edge refers to the targeted edge in the DFA and can be used as a reference for pruning.
+        &#34;&#34;&#34;
+        if self.current_state in self.dfa.graph[&#39;acc&#39;]:
+            # if we are in an accepting state, hold it!
+            return self.dfa.edges[self.current_state, self.current_state][&#39;guard&#39;], None, None
+
+        # find shortest path to all accepting states
+        targets = {}
+        path_exists = False
+        for acc_node in self.dfa.graph[&#39;acc&#39;]:
+            try:
+                targets[acc_node] = nx.shortest_path(self.dfa, source=self.current_state, target=acc_node)
+                path_exists = True
+            except nx.exception.NetworkXNoPath:
+                targets[acc_node] = float(&#39;inf&#39;)
+
+        if not path_exists:
+            return None, None, None
+
+        # find the closest reachable accepting state
+        target = min(targets.items(), key=lambda x: len(x[1]))
+        target_path = target[1]
+        target_next_guards = self.dfa.edges[self.current_state, target_path[1]][&#39;guard&#39;]
+        target_constraint_guards = []
+        for succ in self.dfa.successors(self.current_state):
+            if succ != target_path[1] and succ != self.current_state:
+                target_constraint_guards.extend(self.dfa.edges[self.current_state, succ][&#39;guard&#39;])
+        return reduce_set_of_guards(target_next_guards), reduce_set_of_guards(target_constraint_guards), (self.current_state, target_path[1])
+
+    def tree_to_dfa(self, tree):
+        &#34;&#34;&#34;
+        Converts a SpaTiaL tree to a DFA.
+        Args:
+            tree: input tree parsed by spatial lark parser
+        &#34;&#34;&#34;
+        self.temporal_formula = self.extract_temporal(tree)
+        self.ltlf_parser.parse_formula(self.temporal_formula)
+        self.dfa = self.ltlf_parser.to_nxgraph()
+
+    def get_next_variable_string(self):
+        &#34;&#34;&#34;
+        Creates a new, unique variable name.
+
+        Returns: the variable string
+        &#34;&#34;&#34;
+        id_base_26 = number_to_base(self.next_free_variable_id, 26)
+        letters = [chr(n + ord(&#39;a&#39;)) for n in id_base_26]
+        self.next_free_variable_id += 1
+        return &#39;&#39;.join(letters)
+
+    def extract_temporal(self, tree):
+        &#34;&#34;&#34;
+        Takes a parsed tree and extracts an LTLf formula, creating variables for each &#34;spatial&#34;-type subtree.
+        Keeps dictionaries for mappings between subtrees and variable names.
+
+        Args:
+            tree: input tree parsed by spatial lark parser
+
+        Returns:
+            LTLf formula represented as a string.
+        &#34;&#34;&#34;
+        f = &#39;&#39;
+
+        if tree.data == &#39;temporal&#39;:
+            f += self.extract_temporal(tree.children[0])
+        elif tree.data == &#39;always&#39;:
+            f += &#39;G(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+        elif tree.data == &#39;eventually&#39;:
+            f += &#39;F(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+        elif tree.data == &#39;until&#39;:
+            f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) U (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+        elif tree.data == &#39;and_&#39;:
+            f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) &amp; (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+        elif tree.data == &#39;or_&#39;:
+            f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) | (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+        elif tree.data == &#39;not_&#39;:
+            f += &#39;!(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+        elif tree.data == &#39;implies_&#39;:
+            f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) -&gt; (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+        elif tree.data == &#39;spatial&#39;:
+            element = hash(tree)  # compute hash once
+            # map hash to variable name and tree
+            if element not in self.spatial_dict.keys():
+                variable_string = self.get_next_variable_string()
+                self.spatial_dict[element] = {
+                    &#39;variable&#39;: variable_string,
+                    &#39;tree&#39;: tree
+                }
+            f += self.spatial_dict[element][&#39;variable&#39;]
+        else:
+            assert False, &#39;Operator %s not implemented for automaton-based planning!&#39; % tree.data
+
+        return f
+
+    def get_variable_to_tree_dict(self):
+        &#34;&#34;&#34;
+        Returns:
+            A mapping between temporal variable name and associated spatial tree.
+        &#34;&#34;&#34;
+        return_dict = {}
+
+        for val in self.spatial_dict.values():
+            return_dict[val[&#39;variable&#39;]] = val[&#39;tree&#39;]
+
+        return return_dict
+
+    def get_dfa_ap(self):
+        &#34;&#34;&#34;
+        Returns:
+             The atomic propositions of the DFA.
+        &#34;&#34;&#34;
+        return self.dfa.graph[&#39;ap&#39;]</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="spatial.automaton_planning.AutomatonPlanner.currently_accepting"><code class="name flex">
+<span>def <span class="ident">currently_accepting</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns True if the current state is accepting</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def currently_accepting(self):
+    &#34;&#34;&#34;
+    Returns True if the current state is accepting
+    &#34;&#34;&#34;
+    return self.current_state in self.dfa.graph[&#39;acc&#39;]</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.dfa_step"><code class="name flex">
+<span>def <span class="ident">dfa_step</span></span>(<span>self, symbol, ap)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Executes a single step of the automaton</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>symbol</code></strong></dt>
+<dd>The input symbol</dd>
+<dt><strong><code>ap</code></strong></dt>
+<dd>the input atomic propositions</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dfa_step(self, symbol, ap):
+    &#34;&#34;&#34;
+    Executes a single step of the automaton
+
+    Args:
+        symbol: The input symbol
+        ap: the input atomic propositions
+    &#34;&#34;&#34;
+    assert isinstance(symbol, str), &#39;Symbol is of wrong type, should be str! %s&#39; % type(symbol)
+    for succ in self.dfa.successors(self.current_state):
+        # directly applying the first edge that fits works because the dfa is deterministic!
+        if sog_fits_to_guard(symbol, self.dfa.edges[self.current_state, succ][&#39;guard&#39;], ap, self.dfa.graph[&#39;ap&#39;]):
+            self.current_state = succ
+            break</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.extract_temporal"><code class="name flex">
+<span>def <span class="ident">extract_temporal</span></span>(<span>self, tree)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Takes a parsed tree and extracts an LTLf formula, creating variables for each "spatial"-type subtree.
+Keeps dictionaries for mappings between subtrees and variable names.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>tree</code></strong></dt>
+<dd>input tree parsed by spatial lark parser</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>LTLf formula represented as a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_temporal(self, tree):
+    &#34;&#34;&#34;
+    Takes a parsed tree and extracts an LTLf formula, creating variables for each &#34;spatial&#34;-type subtree.
+    Keeps dictionaries for mappings between subtrees and variable names.
+
+    Args:
+        tree: input tree parsed by spatial lark parser
+
+    Returns:
+        LTLf formula represented as a string.
+    &#34;&#34;&#34;
+    f = &#39;&#39;
+
+    if tree.data == &#39;temporal&#39;:
+        f += self.extract_temporal(tree.children[0])
+    elif tree.data == &#39;always&#39;:
+        f += &#39;G(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+    elif tree.data == &#39;eventually&#39;:
+        f += &#39;F(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+    elif tree.data == &#39;until&#39;:
+        f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) U (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+    elif tree.data == &#39;and_&#39;:
+        f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) &amp; (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+    elif tree.data == &#39;or_&#39;:
+        f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) | (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+    elif tree.data == &#39;not_&#39;:
+        f += &#39;!(&#39; + self.extract_temporal(tree.children[0]) + &#39;)&#39;
+    elif tree.data == &#39;implies_&#39;:
+        f += &#39;(&#39; + self.extract_temporal(tree.children[0]) + &#39;) -&gt; (&#39; + self.extract_temporal(tree.children[1]) + &#39;)&#39;
+    elif tree.data == &#39;spatial&#39;:
+        element = hash(tree)  # compute hash once
+        # map hash to variable name and tree
+        if element not in self.spatial_dict.keys():
+            variable_string = self.get_next_variable_string()
+            self.spatial_dict[element] = {
+                &#39;variable&#39;: variable_string,
+                &#39;tree&#39;: tree
+            }
+        f += self.spatial_dict[element][&#39;variable&#39;]
+    else:
+        assert False, &#39;Operator %s not implemented for automaton-based planning!&#39; % tree.data
+
+    return f</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.get_dfa_ap"><code class="name flex">
+<span>def <span class="ident">get_dfa_ap</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="returns">Returns</h2>
+<p>The atomic propositions of the DFA.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_dfa_ap(self):
+    &#34;&#34;&#34;
+    Returns:
+         The atomic propositions of the DFA.
+    &#34;&#34;&#34;
+    return self.dfa.graph[&#39;ap&#39;]</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.get_next_variable_string"><code class="name flex">
+<span>def <span class="ident">get_next_variable_string</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates a new, unique variable name.</p>
+<p>Returns: the variable string</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_next_variable_string(self):
+    &#34;&#34;&#34;
+    Creates a new, unique variable name.
+
+    Returns: the variable string
+    &#34;&#34;&#34;
+    id_base_26 = number_to_base(self.next_free_variable_id, 26)
+    letters = [chr(n + ord(&#39;a&#39;)) for n in id_base_26]
+    self.next_free_variable_id += 1
+    return &#39;&#39;.join(letters)</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.get_variable_to_tree_dict"><code class="name flex">
+<span>def <span class="ident">get_variable_to_tree_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="returns">Returns</h2>
+<p>A mapping between temporal variable name and associated spatial tree.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_variable_to_tree_dict(self):
+    &#34;&#34;&#34;
+    Returns:
+        A mapping between temporal variable name and associated spatial tree.
+    &#34;&#34;&#34;
+    return_dict = {}
+
+    for val in self.spatial_dict.values():
+        return_dict[val[&#39;variable&#39;]] = val[&#39;tree&#39;]
+
+    return return_dict</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.plan_step"><code class="name flex">
+<span>def <span class="ident">plan_step</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the desired transition and a selfloop to maintain current state
+based on the shortest path to any accepting state.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>target_next_edge, self_loop_constraint, edge</code></dt>
+<dd>If no path exists, target_next_edge is None.</dd>
+</dl>
+<p>If target_next_edge is a self-loop (holding accepting state), self_loop_constraint is None.
+edge refers to the targeted edge in the DFA and can be used as a reference for pruning.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def plan_step(self):
+    &#34;&#34;&#34;
+    Returns the desired transition and a selfloop to maintain current state
+    based on the shortest path to any accepting state.
+
+    Returns:
+        target_next_edge, self_loop_constraint, edge: If no path exists, target_next_edge is None.
+        If target_next_edge is a self-loop (holding accepting state), self_loop_constraint is None.
+        edge refers to the targeted edge in the DFA and can be used as a reference for pruning.
+    &#34;&#34;&#34;
+    if self.current_state in self.dfa.graph[&#39;acc&#39;]:
+        # if we are in an accepting state, hold it!
+        return self.dfa.edges[self.current_state, self.current_state][&#39;guard&#39;], None, None
+
+    # find shortest path to all accepting states
+    targets = {}
+    path_exists = False
+    for acc_node in self.dfa.graph[&#39;acc&#39;]:
+        try:
+            targets[acc_node] = nx.shortest_path(self.dfa, source=self.current_state, target=acc_node)
+            path_exists = True
+        except nx.exception.NetworkXNoPath:
+            targets[acc_node] = float(&#39;inf&#39;)
+
+    if not path_exists:
+        return None, None, None
+
+    # find the closest reachable accepting state
+    target = min(targets.items(), key=lambda x: len(x[1]))
+    target_path = target[1]
+    target_next_guards = self.dfa.edges[self.current_state, target_path[1]][&#39;guard&#39;]
+    target_constraint_guards = []
+    for succ in self.dfa.successors(self.current_state):
+        if succ != target_path[1] and succ != self.current_state:
+            target_constraint_guards.extend(self.dfa.edges[self.current_state, succ][&#39;guard&#39;])
+    return reduce_set_of_guards(target_next_guards), reduce_set_of_guards(target_constraint_guards), (self.current_state, target_path[1])</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.reset_state"><code class="name flex">
+<span>def <span class="ident">reset_state</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Resets the current state to the initial state</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def reset_state(self):
+    &#34;&#34;&#34;
+    Resets the current state to the initial state
+    &#34;&#34;&#34;
+    self.current_state = self.dfa.graph[&#39;init&#39;]</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.simulate_trace"><code class="name flex">
+<span>def <span class="ident">simulate_trace</span></span>(<span>self, trace, ap)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Simulates a run on the automaton, given some inputs and updates the state accordingly</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>trace</code></strong></dt>
+<dd>The input trace</dd>
+<dt><strong><code>ap</code></strong></dt>
+<dd>the input atomic propositions</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def simulate_trace(self, trace, ap):
+    &#34;&#34;&#34;
+    Simulates a run on the automaton, given some inputs and updates the state accordingly
+
+    Args:
+        trace: The input trace
+        ap: the input atomic propositions
+    &#34;&#34;&#34;
+    self.reset_state()
+    for symbol in trace:
+        self.dfa_step(symbol, ap)
+    return self.current_state in self.dfa.graph[&#39;acc&#39;]</code></pre>
+</details>
+</dd>
+<dt id="spatial.automaton_planning.AutomatonPlanner.tree_to_dfa"><code class="name flex">
+<span>def <span class="ident">tree_to_dfa</span></span>(<span>self, tree)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts a SpaTiaL tree to a DFA.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>tree</code></strong></dt>
+<dd>input tree parsed by spatial lark parser</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tree_to_dfa(self, tree):
+    &#34;&#34;&#34;
+    Converts a SpaTiaL tree to a DFA.
+    Args:
+        tree: input tree parsed by spatial lark parser
+    &#34;&#34;&#34;
+    self.temporal_formula = self.extract_temporal(tree)
+    self.ltlf_parser.parse_formula(self.temporal_formula)
+    self.dfa = self.ltlf_parser.to_nxgraph()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spatial" href="index.html">spatial</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spatial.automaton_planning.compare_obs" href="#spatial.automaton_planning.compare_obs">compare_obs</a></code></li>
+<li><code><a title="spatial.automaton_planning.flip_guard_bit" href="#spatial.automaton_planning.flip_guard_bit">flip_guard_bit</a></code></li>
+<li><code><a title="spatial.automaton_planning.number_to_base" href="#spatial.automaton_planning.number_to_base">number_to_base</a></code></li>
+<li><code><a title="spatial.automaton_planning.reduce_set_of_guards" href="#spatial.automaton_planning.reduce_set_of_guards">reduce_set_of_guards</a></code></li>
+<li><code><a title="spatial.automaton_planning.replace_guard_bit" href="#spatial.automaton_planning.replace_guard_bit">replace_guard_bit</a></code></li>
+<li><code><a title="spatial.automaton_planning.resolve_all_x" href="#spatial.automaton_planning.resolve_all_x">resolve_all_x</a></code></li>
+<li><code><a title="spatial.automaton_planning.sog_fits_to_guard" href="#spatial.automaton_planning.sog_fits_to_guard">sog_fits_to_guard</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="spatial.automaton_planning.AutomatonPlanner" href="#spatial.automaton_planning.AutomatonPlanner">AutomatonPlanner</a></code></h4>
+<ul class="">
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.currently_accepting" href="#spatial.automaton_planning.AutomatonPlanner.currently_accepting">currently_accepting</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.dfa_step" href="#spatial.automaton_planning.AutomatonPlanner.dfa_step">dfa_step</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.extract_temporal" href="#spatial.automaton_planning.AutomatonPlanner.extract_temporal">extract_temporal</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.get_dfa_ap" href="#spatial.automaton_planning.AutomatonPlanner.get_dfa_ap">get_dfa_ap</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.get_next_variable_string" href="#spatial.automaton_planning.AutomatonPlanner.get_next_variable_string">get_next_variable_string</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.get_variable_to_tree_dict" href="#spatial.automaton_planning.AutomatonPlanner.get_variable_to_tree_dict">get_variable_to_tree_dict</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.plan_step" href="#spatial.automaton_planning.AutomatonPlanner.plan_step">plan_step</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.reset_state" href="#spatial.automaton_planning.AutomatonPlanner.reset_state">reset_state</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.simulate_trace" href="#spatial.automaton_planning.AutomatonPlanner.simulate_trace">simulate_trace</a></code></li>
+<li><code><a title="spatial.automaton_planning.AutomatonPlanner.tree_to_dfa" href="#spatial.automaton_planning.AutomatonPlanner.tree_to_dfa">tree_to_dfa</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

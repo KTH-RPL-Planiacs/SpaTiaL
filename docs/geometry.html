@@ -1,0 +1,3047 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>spatial.geometry API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spatial.geometry</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from abc import *
+from collections import OrderedDict
+from enum import Enum
+from typing import Set
+
+import matplotlib.patches as mp
+import matplotlib.pyplot as plt
+import numpy as np
+import shapely.affinity as af
+import shapely.geometry as sh
+
+_DEBUG = False
+
+
+class IColor(Enum):
+    N = 0
+    R = 1
+    G = 2
+    B = 3
+
+
+class SpatialInterface(ABC):
+    &#34;&#34;&#34;
+    Interface for spatial relation logic. All objects need to provide a quantitative semantic.
+    &#34;&#34;&#34;
+
+    @abstractmethod
+    def shapes(self) -&gt; set:
+        &#34;&#34;&#34;
+        Returns the shapes stored in the SpatialInterface object
+        Returns: The shapes of the SpatialInterface object
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def distance(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        &#34;&#34;&#34;
+        Returns the signed distance to another spatial interface object
+        Args:
+            other: The other spatial interface object
+
+        Returns: Distance (squared) to other object
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def overlap(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        &#34;&#34;&#34;
+        Computes if this object overlaps with another object
+        Args:
+            other: The other object
+
+        Returns: &gt;=0 if both objects overlap and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def enclosed_in(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        &#34;&#34;&#34;
+        Computes if this objects is enclosed in another object. If any this object is a collection, every object
+        must be enclosed in an object of other
+        Args:
+            other: The other object
+
+        Returns: &gt;=0 if this object is enclosed in the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def proximity(self, other: &#39;SpatialInterface&#39;, eps: float) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this objects is in proximity to another object
+        Args:
+            other: The other object
+            eps: Specification of proximity
+
+        Returns: &gt;=0 if objects are in proximity and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def distance_compare(self, other: &#39;SpatialInterface&#39;, eps: float, fun) -&gt; bool:
+        &#34;&#34;&#34;
+        Compares the distance between two objects and a target value (e.g., a dist b &lt;= eps)
+        Args:
+            other: The other object
+            eps: The target value
+            fun: The function for comparing (&lt;=,&gt;=,==)
+
+        Returns: &gt;=0 if predicate is true and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def touching(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if two objects are touching
+        Args:
+            other: The other object
+
+        Returns:
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def angle(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes the angle between to objects
+        Args:
+            other: The other object
+
+        Returns: NOT YET IMPLEMENTED / USED
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def above(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is above another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is above the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def below(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is below another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is below the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def left_of(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is left of another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is left of the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def right_of(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is right of another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is right of the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def close_to(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is close to another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is close to the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def far_from(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is far from another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is far from the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def closer_to_than(self, closer: &#39;SpatialInterface&#39;, than: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is closer to one object than another
+        Args:
+            closer: The object that should be closer
+            than: The object that should be further away
+
+        Returns: &gt;= 0 if this object is closer to one object than another and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def enlarge(self, radius: float) -&gt; &#39;SpatialInterface&#39;:
+        &#34;&#34;&#34;
+        Enlarges an object with a given radius
+        Args:
+            radius: The radius for enlarging the object
+
+        Returns: The enlarged object
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def __or__(self, other: &#39;SpatialInterface&#39;):
+        pass
+
+    @abstractmethod
+    def __sub__(self, other: &#39;SpatialInterface&#39;):
+        pass
+
+
+class ObjectInTime(ABC):
+    &#34;&#34;&#34;
+    Interface for an object changing with time.
+    &#34;&#34;&#34;
+
+    @abstractmethod
+    def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+        &#34;&#34;&#34;
+        Returns the object at the given time point
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+        &#34;&#34;&#34;
+        Returns the object at the given time point (given as index)
+        Args:
+            idx: The index of the time step
+
+        Returns:
+
+        &#34;&#34;&#34;
+        pass
+
+
+class DynamicObject(ObjectInTime):
+
+    def __init__(self):
+        self._shapes = OrderedDict()  # compatible with all Python versions, preserves insertion order
+        self._latest_time = None
+
+    def addObject(self, object: SpatialInterface, time: int):
+        if self._latest_time is None:
+            self._latest_time = time - 1
+        assert time not in self._shapes, &#39;&lt;DynamicObject/add&gt;: time step already added! t={}&#39;.format(time)
+        assert time == self._latest_time + 1, &#39;&lt;DynamicObject/add&gt;: time step missing! t = {}&#39;.format(time)
+        self._shapes[time] = object
+        self._latest_time = time
+
+    def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+        assert time in self._shapes, &#39;&lt;DynamicObject/add&gt;: time step not yet added! t={}&#39;.format(time)
+        return self._shapes[time]
+
+    def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+        assert idx &lt; len(self._shapes) if idx &gt;= 0 else abs(idx) &lt;= len(self._shapes)
+        return list(self._shapes.values())[idx]
+
+    def __or__(self, other):
+        if isinstance(other, (StaticObject, DynamicObject)):
+            return ObjectCollection(self, other)
+        elif isinstance(other, ObjectCollection):
+            return other + self
+        else:
+            raise Exception(&#39;&lt;DynamicObject/add&gt;: Provided object not supported! other = {}&#39;.format(other))
+
+
+class StaticObject(ObjectInTime):
+    &#34;&#34;&#34;
+    An SpatialInterface object static in time. The simplest implementation of ObjectInTime
+    &#34;&#34;&#34;
+
+    def __init__(self, spatial_object: SpatialInterface):
+        super().__init__()
+        self._spatial_obj = spatial_object
+
+    def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+        return self._spatial_obj
+
+    def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+        return self._spatial_obj
+
+    def __or__(self, other):
+        if isinstance(other, (StaticObject, DynamicObject)):
+            return ObjectCollection(self, other)
+        elif isinstance(other, ObjectCollection):
+            return other + self
+        else:
+            raise Exception(&#39;&lt;DynamicObject/add&gt;: Provided object not supported! other = {}&#39;.format(other))
+
+
+class ObjectCollection(ObjectInTime):
+
+    def __init__(self, *args):
+        self._object_set = set(args)
+
+    def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+        objs = [o.getObject(time) for o in self._object_set]
+        shapes = [o.shapes() for o in objs]
+        shapes = shapes[0].union(*shapes[1:])
+        assert len(objs) &gt; 0
+        return type(objs[0])(shapes)
+
+    def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+        objs = [o.getObjectByIndex(idx) for o in self._object_set]
+        shapes = [o.shapes for o in objs]
+        shapes = shapes[0].union(*shapes[1:])
+        assert len(objs) &gt; 0
+        return type(objs[0])(shapes)
+
+    def __len__(self):
+        return len(self._object_set)
+
+    @property
+    def objects(self):
+        return self._object_set
+
+    def __or__(self, other):
+        collection = ObjectCollection()
+        if isinstance(other, ObjectCollection):
+            collection._object_set = self._object_set | other._object_set
+        elif isinstance(other, (StaticObject, DynamicObject)):
+            collection._object_set = self._object_set | {other}
+        else:
+            raise Exception(&#39;&lt;ObjectCollection/add&gt;: Provided object not supported! other = {}&#39;.format(other))
+        return collection
+
+    def __sub__(self, other):
+        collection = ObjectCollection()
+        if isinstance(other, ObjectCollection):
+            collection._object_set = self._object_set - other._object_set
+        elif isinstance(other, (StaticObject, DynamicObject)):
+            collection._object_set = self._object_set - {other}
+        else:
+            raise Exception(&#39;&lt;ObjectCollection/add&gt;: Provided object not supported! other = {}&#39;.format(other))
+        return collection
+
+    def __and__(self, other):
+        collection = ObjectCollection()
+        if isinstance(other, ObjectCollection):
+            collection._object_set = self._object_set &amp; other._object_set
+        elif isinstance(other, (StaticObject, DynamicObject)):
+            collection._object_set = self._object_set &amp; {other}
+        else:
+            raise Exception(&#39;&lt;ObjectCollection/add&gt;: Provided object not supported! other = {}&#39;.format(other))
+        return collection
+
+
+class Polygon(object):
+    &#34;&#34;&#34;
+    Class representing a polygon
+    &#34;&#34;&#34;
+    _id = 0
+    _ORIGIN = sh.Point([0, 0])  # origin for penetration depth computation
+    # _MinkowskiDiff = lambda a, b: sh.Polygon(np.vstack(np.repeat([a],len(b),axis=0)-b)).convex_hull
+    _MinkowskiDiff = lambda a, b: sh.Polygon(np.vstack([a - v for v in b])).convex_hull
+
+    @classmethod
+    def _get_id(cls):
+        cls._id += 1
+        return cls._id
+
+    def __init__(self, vertices: np.ndarray, color: IColor = IColor.N, convex_hull: bool = True):
+        &#34;&#34;&#34;
+        Initializes a polygon object
+        Args:
+            vertices: The vertices of the polygon
+            color: The color of the polygon. Default = IColor.N
+            convex_hull: bool to set if convex hull should be computed. Default = True
+        &#34;&#34;&#34;
+
+        assert isinstance(vertices, np.ndarray), &#39;&lt;Polygon/init&gt;: vertices must be of type np.ndarray!&#39;
+
+        if convex_hull:
+            self.shape = sh.Polygon(vertices).convex_hull
+        else:
+            self.shape = sh.Polygon(vertices)
+        self.color = color
+        self.id = self._get_id()
+
+    @property
+    def shape(self) -&gt; sh.Polygon:
+        &#34;&#34;&#34;
+        Returns the shapely polygon object of this polygon
+        Returns: Shapely polygon
+
+        &#34;&#34;&#34;
+        return self._shape
+
+    @shape.setter
+    def shape(self, shape: sh.Polygon):
+        &#34;&#34;&#34;
+        Sets the shapely polygon of this polygon
+        Args:
+            shape: The new shapely polygon
+
+        &#34;&#34;&#34;
+        assert isinstance(shape, sh.Polygon), &#39;&lt;Polygon/shape&gt;: Only shapely polygons are supported&#39;
+        self._shape = shape
+
+    @property
+    def vertices(self) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        Returns the vertices of the polygon
+        Returns: The vertices of the polygon as a numpy array
+
+        &#34;&#34;&#34;
+        return np.array(self.shape.exterior.coords)
+
+    @property
+    def center(self) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        Returns the geometric center of the polygon
+        Returns: Geometric center of the polygon as a numpy array
+
+        &#34;&#34;&#34;
+        return np.array(self.shape.centroid)
+
+    def enlarge(self, radius: float) -&gt; &#39;Polygon&#39;:
+        enlarged = self.shape.buffer(radius)
+        return Polygon(np.array(enlarged.exterior.coords))
+
+    def translate(self, t: np.ndarray):
+        &#34;&#34;&#34;
+        Translates the polygon by the given translation vector
+        Args:
+            t: Translation vector as numpy array with shape (2x1)
+
+        Returns: Translated version of this polygon (no copy)
+
+        &#34;&#34;&#34;
+
+        assert len(t) == 2
+        self.shape = af.translate(self.shape, t[0], t[1])
+        return self
+
+    def rotate(self, theta: float, from_origin: bool = True, use_radians=False):
+        &#34;&#34;&#34;
+        Rotates the polygon around its center (of its bounding box)
+        Args:
+            theta: The angle of the rotation
+            from_origin: currently not used
+            use_radians: True if angle is given in radian
+
+        Returns: Rotated version of this polygon (no copy)
+
+        &#34;&#34;&#34;
+
+        self.shape = af.rotate(self.shape, theta, origin=&#39;center&#39;, use_radians=use_radians)
+        return self
+
+    def distance(self, other: &#39;Polygon&#39;):
+        &#34;&#34;&#34;
+        Computes the distance to another polygon object
+        Args:
+            other: The other polygon object
+
+        Returns: The distance (&gt;=0) between this and the other object
+
+        &#34;&#34;&#34;
+        return self.shape.distance(other.shape)
+
+    def penetration_depth(self, other: &#39;Polygon&#39;):
+        &#34;&#34;&#34;
+        Computes the penetration depth with another polygon object
+        Args:
+            other: The other polygon object
+
+        Returns: The penetration depth (&gt;=0) between this and the other object.
+        Zero if no intersection between the objects.
+
+        &#34;&#34;&#34;
+        # return Polygon._MinkowskiDiff(np.asarray(self.shape.exterior.coords),
+        #                              np.asarray(other.shape.exterior.coords)).exterior.distance(self._ORIGIN)
+        return self._penetration_depth(np.asarray(self.shape.exterior.coords), np.asarray(other.shape.exterior.coords))
+
+    def _penetration_depth(self, vert1: np.ndarray, vert2: np.ndarray):
+        return Polygon._MinkowskiDiff(vert1, vert2).exterior.distance(self._ORIGIN)
+
+    def signed_distance(self, other: &#39;Polygon&#39;):
+        &#34;&#34;&#34;
+        Computes the signed distance of this polygon to another one
+        Args:
+            other: The other polygon
+
+        Returns: The signed distance between the two polygons (&lt;= 0 if touching/intersection, &gt;0 if no penetration)
+
+        &#34;&#34;&#34;
+        gjk = self.distance(other)
+        return gjk - self.penetration_depth(other) if gjk &lt;= 0.0000001 else gjk
+
+    def enclosedIn(self, other: &#39;Polygon&#39;):
+        &#34;&#34;&#34;
+        Computes if this polygon is enclosed in another polygon (i.e., all vertices are have negative signed distance)
+        Args:
+            other: The superset polygon
+
+        Returns: &gt;=0 if this polygon is enclosed in the other polygon, &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        sd = -np.inf
+        o = np.array(other.shape.exterior.coords)
+        for v in self.vertices:
+            gjk = other.shape.distance(sh.Point(v))
+            sd_c = gjk - self._penetration_depth(v, o) if gjk &lt; 0.0000001 else gjk
+            if sd_c &gt; sd:
+                sd = sd_c
+        return -sd if not np.isclose(sd, 0) else sd
+
+    def contains_point(self, point: np.ndarray):
+        &#34;&#34;&#34;
+        Checks whether a given point is enclosed in the polygon
+        Args:
+            point: The point to check
+
+        Returns: True if the point is enclosed in the polygon and False otherwise
+
+        &#34;&#34;&#34;
+        return self.shape.contains(sh.Point(point))
+
+    @property
+    def color(self) -&gt; IColor:
+        &#34;&#34;&#34;
+        Color of polygon
+        Returns: Color of polygon
+
+        &#34;&#34;&#34;
+        return self._color
+
+    @color.setter
+    def color(self, color: IColor):
+        &#34;&#34;&#34;
+        Color of polygon
+        Args:
+            color: New color of circle
+
+        &#34;&#34;&#34;
+        self._color = color
+
+    def plot(self, ax=None, alpha=1.0, label: bool = True, color=&#39;k&#39;):
+        &#34;&#34;&#34;
+        Plots the polygon
+        Args:
+            ax: The axis object to plot to (if provided)
+            alpha: The alpha value of the circle
+            label: bool to indicate whether to plot label
+
+        &#34;&#34;&#34;
+
+        if ax is None:
+            ax = plt.gca()
+
+        ax.add_patch(
+            mp.Polygon(self.vertices, color=color, alpha=alpha))
+        if label:
+            plt.text(self.center[0], self.center[1], s=str(self.id), c=&#39;white&#39;, bbox=dict(facecolor=&#39;white&#39;, alpha=0.5))
+
+    def minkowski_sum(self, other: &#39;Polygon&#39;, sub: bool = False) -&gt; &#39;Polygon&#39;:
+        new_vertices = list()
+        for v in other.vertices:
+            if not sub:
+                new_vertices.append(self.vertices + (v - other.center))
+            else:
+                new_vertices.append(self.vertices - (v - other.center))
+        return Polygon(np.vstack(new_vertices))
+
+    def __add__(self, other):
+        return self.minkowski_sum(other)
+
+    def __sub__(self, other):
+        return self.minkowski_sum(other, sub=True)
+
+    def __hash__(self):
+        return self.id
+
+
+class Circle(Polygon):
+
+    def __init__(self, center: np.ndarray, r: float):
+        # approximate circle
+        vertices = np.array(sh.Point(center).buffer(r).exterior)
+        super().__init__(vertices, convex_hull=False)
+
+
+class PolygonCollection(SpatialInterface):
+    &#34;&#34;&#34;
+        Implements spatial interface for objects of type polytope. Represents set of polytopes
+        &#34;&#34;&#34;
+
+    def __init__(self, polygons: Set[Polygon]):
+        &#34;&#34;&#34;
+        Initializes a circle collection with a set of circles
+        Args:
+            circles: Set of circles
+        &#34;&#34;&#34;
+        self.polygons = polygons if isinstance(polygons, set) else set(polygons)
+
+    @property
+    def polygons(self) -&gt; Set[Polygon]:
+        &#34;&#34;&#34;
+        Set of polygons
+        Returns: set of polytopes
+
+        &#34;&#34;&#34;
+        return self._polygons
+
+    @polygons.setter
+    def polygons(self, polygons: Set[Polygon]):
+        &#34;&#34;&#34;
+        Set of polygons
+        Args:
+            polygons: new set of polytopes
+
+        Returns:
+
+        &#34;&#34;&#34;
+        self._polygons = polygons
+
+    def add(self, p: Polygon):
+        &#34;&#34;&#34;
+        Adds a polygons object to this collection
+        Args:
+            p: The polygons to add
+
+
+        &#34;&#34;&#34;
+        self.polygons.add(p)
+
+    def remove(self, p: Polygon):
+        &#34;&#34;&#34;
+        Removes a polygons from this collection
+        Args:
+            p: The polygons to remove
+
+
+        &#34;&#34;&#34;
+        self.polygons.discard(p)
+
+    def shapes(self) -&gt; set:
+        return self.polygons
+
+    def of_color(self, color: IColor) -&gt; &#39;PolygoneCollection&#39;:
+        &#34;&#34;&#34;
+        Returns a polygons collection containing polytopes of the specified color
+        Args:
+            color: The specified color
+
+        Returns: polygons collection containing polytopes of specific color
+
+        &#34;&#34;&#34;
+        return PolygonCollection(set([p for p in self.polygons if p.color == color]))
+
+    def plot(self, ax=None, color=&#39;k&#39;, label=True):
+        &#34;&#34;&#34;
+        Draws all polygons in this collection
+        Args:
+            ax: The axis object to plot to
+            label: bool to indicate whether to plot labels
+
+        Returns:
+
+        &#34;&#34;&#34;
+        if ax is None:
+            ax = plt.gca()
+        for p in self.polygons:
+            p.plot(ax=ax, label=label, color=color)
+        plt.autoscale()
+        plt.axis(&#39;equal&#39;)
+
+    def distance(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        assert isinstance(other, PolygonCollection), \
+            &#39;&lt;Polygon/distance&gt;: Other object must be of type polygon, got {}&#39;.format(other)
+
+        # compute distances
+
+        result = list()
+        for p in self.polygons:
+            result.append([p.signed_distance(o) for o in other.polygons])
+
+        return result
+
+    def overlap(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        # intersection polygons
+        inter = list()
+        for p in self.polygons:
+            inter.append([-p.signed_distance(o) for o in other.polygons])
+        inter = np.array(inter)
+
+        return np.max(inter)
+
+    def enclosed_in(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        enclosed = list()
+        for p in self.polygons:
+            enclosed.append(np.array([p.enclosedIn(o) for o in other.polygons]).max())
+        return np.array(enclosed).min()
+
+    def proximity(self, other: &#39;SpatialInterface&#39;, eps: float) -&gt; bool:
+        return self.distance_compare(other, eps, np.less_equal)
+
+    def distance_compare(self, other: &#39;SpatialInterface&#39;, eps: float, fun):
+        assert np.positive(eps), &#39;&lt;Polygon&gt;: Epsilon must be positive, got {}&#39;.format(eps)
+
+        # compute result
+        if fun == np.less_equal:
+            return np.max(np.repeat(eps, len(other.polygons)) - self.distance(other))
+        if fun == np.greater_equal:
+            return np.max(self.distance(other) - np.repeat(eps, len(other.polygons)))
+        if fun == np.equal:
+            return np.min([np.max(np.repeat(eps, len(other.polygons)) - self.distance(other)),
+                           np.max(self.distance(other) - np.repeat(eps, len(other.polygons)))])
+
+    def touching(self, other: &#39;SpatialInterface&#39;, eps: float = 5) -&gt; bool:
+        return self.proximity(other, eps=eps)
+        return np.min([self.proximity(other, eps=eps), -self.proximity(other, eps=-eps)])
+
+    def _min(self, axis: int) -&gt; float:
+        &#34;&#34;&#34;
+        Returns the minimum value of the projection of all polygons to the specified axis
+        Args:
+            axis: The specified axis
+
+        Returns: The minimum value along the specified axis
+
+        &#34;&#34;&#34;
+        return np.min([c.center[axis] for c in self.polygons])
+
+    def _max(self, axis: int) -&gt; float:
+        &#34;&#34;&#34;
+        Returns the maximum value of the projection of all polygons to the specified axis
+        Args:
+            axis: The specified axis
+
+        Returns: The maximum value along the specified axis
+
+        &#34;&#34;&#34;
+        return np.max([c.center[axis] for c in self.polygons])
+
+    def left_of(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return other._min(0) - self._max(0)
+
+    def right_of(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return self._min(0) - other._max(0)
+
+    def above(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return self._min(1) - other._max(1)
+
+    def below(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return other._min(1) - self._max(1)
+
+    def close_to(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return self.proximity(other, 70.)
+
+    def far_from(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return -self.proximity(other, 150)
+
+    def closer_to_than(self, closer: &#39;SpatialInterface&#39;, than: &#39;SpatialInterface&#39;) -&gt; float:
+        return np.min(self.distance(than)) - np.min(self.distance(closer))
+
+    def enlarge(self, radius: float) -&gt; &#39;SpatialInterface&#39;:
+        return PolygonCollection(set([p.enlarge(radius) for p in self.polygons]))
+
+    def angle(self, other: &#39;CircleOLD&#39;) -&gt; float:
+        pass
+
+    def __or__(self, other: &#39;PolytopeCollection&#39;):
+        return PolygonCollection(self.polygons | other.polygons)
+
+    def __sub__(self, other: &#39;PolytopeCollection&#39;):
+        return PolygonCollection(self.polygons - other.polygons)
+
+
+if __name__ == &#39;__main__&#39;:
+
+    p1 = Polygon(np.array([[0, 0], [3, 3], [6, 0]]))
+    p2 = Polygon(np.array([[3, 5], [7, 8], [10, 6]]))
+    p2 = p2.rotate(30.45)
+    p3 = Polygon(np.array([[3, 5], [7, 8], [10, 6]]) - 4, IColor.B)
+
+    p_sum = p1.minkowski_sum(p2)
+    (p1 + p2).plot(color=&#39;r&#39;)
+    (p1 - p2).plot(color=&#39;g&#39;)
+    plt.autoscale()
+    plt.show()
+    print(p1)
+
+    p1.plot()
+    p2.plot()
+    p3.plot()
+    plt.autoscale()
+    plt.show()
+    import time
+
+    a = sh.Polygon(p1.vertices)
+    b = sh.Polygon(p2.vertices)
+    print(&#39;Area is {}&#39;.format(a.area))
+    print(&#39;Distance is {}&#39;.format(a.distance(b)))
+
+    t0 = time.time()
+    for i in range(100):
+        a.distance(b)
+    print(f&#39;Time took {time.time() - t0}&#39;)
+
+    pc = PolygonCollection(set([p1, p2]))
+    pd = PolygonCollection(set([p3]))
+
+    t0 = time.time()
+    print(&#39;Distance is {}&#39;.format(pc.distance(pd)))
+    print(&#39;Distance is {}&#39;.format(pc.distance(pc)))
+    print(&#39;Intersecting is {}&#39;.format(pc.overlap(pd)))
+    print(&#39;Intersecting is {}&#39;.format(pc.overlap(pc)))
+    print(f&#39;Time took {time.time() - t0}&#39;)
+
+    t0 = time.time()
+    for i in range(1):
+        pc.distance(pc)
+        # p1.intersect(p2).volume
+    print(f&#39;Time took for 10 {time.time() - t0}&#39;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="spatial.geometry.Circle"><code class="flex name class">
+<span>class <span class="ident">Circle</span></span>
+<span>(</span><span>center: numpy.ndarray, r: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class representing a polygon</p>
+<p>Initializes a polygon object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>vertices</code></strong></dt>
+<dd>The vertices of the polygon</dd>
+<dt><strong><code>color</code></strong></dt>
+<dd>The color of the polygon. Default = IColor.N</dd>
+<dt><strong><code>convex_hull</code></strong></dt>
+<dd>bool to set if convex hull should be computed. Default = True</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Circle(Polygon):
+
+    def __init__(self, center: np.ndarray, r: float):
+        # approximate circle
+        vertices = np.array(sh.Point(center).buffer(r).exterior)
+        super().__init__(vertices, convex_hull=False)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a></b></code>:
+<ul class="hlist">
+<li><code><a title="spatial.geometry.Polygon.center" href="#spatial.geometry.Polygon.center">center</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.color" href="#spatial.geometry.Polygon.color">color</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.contains_point" href="#spatial.geometry.Polygon.contains_point">contains_point</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.distance" href="#spatial.geometry.Polygon.distance">distance</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.enclosedIn" href="#spatial.geometry.Polygon.enclosedIn">enclosedIn</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.penetration_depth" href="#spatial.geometry.Polygon.penetration_depth">penetration_depth</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.plot" href="#spatial.geometry.Polygon.plot">plot</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.rotate" href="#spatial.geometry.Polygon.rotate">rotate</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.shape" href="#spatial.geometry.Polygon.shape">shape</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.signed_distance" href="#spatial.geometry.Polygon.signed_distance">signed_distance</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.translate" href="#spatial.geometry.Polygon.translate">translate</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.vertices" href="#spatial.geometry.Polygon.vertices">vertices</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="spatial.geometry.DynamicObject"><code class="flex name class">
+<span>class <span class="ident">DynamicObject</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Interface for an object changing with time.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DynamicObject(ObjectInTime):
+
+    def __init__(self):
+        self._shapes = OrderedDict()  # compatible with all Python versions, preserves insertion order
+        self._latest_time = None
+
+    def addObject(self, object: SpatialInterface, time: int):
+        if self._latest_time is None:
+            self._latest_time = time - 1
+        assert time not in self._shapes, &#39;&lt;DynamicObject/add&gt;: time step already added! t={}&#39;.format(time)
+        assert time == self._latest_time + 1, &#39;&lt;DynamicObject/add&gt;: time step missing! t = {}&#39;.format(time)
+        self._shapes[time] = object
+        self._latest_time = time
+
+    def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+        assert time in self._shapes, &#39;&lt;DynamicObject/add&gt;: time step not yet added! t={}&#39;.format(time)
+        return self._shapes[time]
+
+    def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+        assert idx &lt; len(self._shapes) if idx &gt;= 0 else abs(idx) &lt;= len(self._shapes)
+        return list(self._shapes.values())[idx]
+
+    def __or__(self, other):
+        if isinstance(other, (StaticObject, DynamicObject)):
+            return ObjectCollection(self, other)
+        elif isinstance(other, ObjectCollection):
+            return other + self
+        else:
+            raise Exception(&#39;&lt;DynamicObject/add&gt;: Provided object not supported! other = {}&#39;.format(other))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="spatial.geometry.ObjectInTime" href="#spatial.geometry.ObjectInTime">ObjectInTime</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="spatial.geometry.DynamicObject.addObject"><code class="name flex">
+<span>def <span class="ident">addObject</span></span>(<span>self, object: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>, time: int)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addObject(self, object: SpatialInterface, time: int):
+    if self._latest_time is None:
+        self._latest_time = time - 1
+    assert time not in self._shapes, &#39;&lt;DynamicObject/add&gt;: time step already added! t={}&#39;.format(time)
+    assert time == self._latest_time + 1, &#39;&lt;DynamicObject/add&gt;: time step missing! t = {}&#39;.format(time)
+    self._shapes[time] = object
+    self._latest_time = time</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="spatial.geometry.ObjectInTime" href="#spatial.geometry.ObjectInTime">ObjectInTime</a></b></code>:
+<ul class="hlist">
+<li><code><a title="spatial.geometry.ObjectInTime.getObject" href="#spatial.geometry.ObjectInTime.getObject">getObject</a></code></li>
+<li><code><a title="spatial.geometry.ObjectInTime.getObjectByIndex" href="#spatial.geometry.ObjectInTime.getObjectByIndex">getObjectByIndex</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="spatial.geometry.IColor"><code class="flex name class">
+<span>class <span class="ident">IColor</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class IColor(Enum):
+    N = 0
+    R = 1
+    G = 2
+    B = 3</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="spatial.geometry.IColor.B"><code class="name">var <span class="ident">B</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="spatial.geometry.IColor.G"><code class="name">var <span class="ident">G</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="spatial.geometry.IColor.N"><code class="name">var <span class="ident">N</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="spatial.geometry.IColor.R"><code class="name">var <span class="ident">R</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="spatial.geometry.ObjectCollection"><code class="flex name class">
+<span>class <span class="ident">ObjectCollection</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Interface for an object changing with time.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ObjectCollection(ObjectInTime):
+
+    def __init__(self, *args):
+        self._object_set = set(args)
+
+    def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+        objs = [o.getObject(time) for o in self._object_set]
+        shapes = [o.shapes() for o in objs]
+        shapes = shapes[0].union(*shapes[1:])
+        assert len(objs) &gt; 0
+        return type(objs[0])(shapes)
+
+    def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+        objs = [o.getObjectByIndex(idx) for o in self._object_set]
+        shapes = [o.shapes for o in objs]
+        shapes = shapes[0].union(*shapes[1:])
+        assert len(objs) &gt; 0
+        return type(objs[0])(shapes)
+
+    def __len__(self):
+        return len(self._object_set)
+
+    @property
+    def objects(self):
+        return self._object_set
+
+    def __or__(self, other):
+        collection = ObjectCollection()
+        if isinstance(other, ObjectCollection):
+            collection._object_set = self._object_set | other._object_set
+        elif isinstance(other, (StaticObject, DynamicObject)):
+            collection._object_set = self._object_set | {other}
+        else:
+            raise Exception(&#39;&lt;ObjectCollection/add&gt;: Provided object not supported! other = {}&#39;.format(other))
+        return collection
+
+    def __sub__(self, other):
+        collection = ObjectCollection()
+        if isinstance(other, ObjectCollection):
+            collection._object_set = self._object_set - other._object_set
+        elif isinstance(other, (StaticObject, DynamicObject)):
+            collection._object_set = self._object_set - {other}
+        else:
+            raise Exception(&#39;&lt;ObjectCollection/add&gt;: Provided object not supported! other = {}&#39;.format(other))
+        return collection
+
+    def __and__(self, other):
+        collection = ObjectCollection()
+        if isinstance(other, ObjectCollection):
+            collection._object_set = self._object_set &amp; other._object_set
+        elif isinstance(other, (StaticObject, DynamicObject)):
+            collection._object_set = self._object_set &amp; {other}
+        else:
+            raise Exception(&#39;&lt;ObjectCollection/add&gt;: Provided object not supported! other = {}&#39;.format(other))
+        return collection</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="spatial.geometry.ObjectInTime" href="#spatial.geometry.ObjectInTime">ObjectInTime</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="spatial.geometry.ObjectCollection.objects"><code class="name">var <span class="ident">objects</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def objects(self):
+    return self._object_set</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="spatial.geometry.ObjectInTime" href="#spatial.geometry.ObjectInTime">ObjectInTime</a></b></code>:
+<ul class="hlist">
+<li><code><a title="spatial.geometry.ObjectInTime.getObject" href="#spatial.geometry.ObjectInTime.getObject">getObject</a></code></li>
+<li><code><a title="spatial.geometry.ObjectInTime.getObjectByIndex" href="#spatial.geometry.ObjectInTime.getObjectByIndex">getObjectByIndex</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="spatial.geometry.ObjectInTime"><code class="flex name class">
+<span>class <span class="ident">ObjectInTime</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Interface for an object changing with time.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ObjectInTime(ABC):
+    &#34;&#34;&#34;
+    Interface for an object changing with time.
+    &#34;&#34;&#34;
+
+    @abstractmethod
+    def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+        &#34;&#34;&#34;
+        Returns the object at the given time point
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+        &#34;&#34;&#34;
+        Returns the object at the given time point (given as index)
+        Args:
+            idx: The index of the time step
+
+        Returns:
+
+        &#34;&#34;&#34;
+        pass</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="spatial.geometry.DynamicObject" href="#spatial.geometry.DynamicObject">DynamicObject</a></li>
+<li><a title="spatial.geometry.ObjectCollection" href="#spatial.geometry.ObjectCollection">ObjectCollection</a></li>
+<li><a title="spatial.geometry.StaticObject" href="#spatial.geometry.StaticObject">StaticObject</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="spatial.geometry.ObjectInTime.getObject"><code class="name flex">
+<span>def <span class="ident">getObject</span></span>(<span>self, time) ‑> <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the object at the given time point</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+    &#34;&#34;&#34;
+    Returns the object at the given time point
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.ObjectInTime.getObjectByIndex"><code class="name flex">
+<span>def <span class="ident">getObjectByIndex</span></span>(<span>self, idx: int) ‑> <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the object at the given time point (given as index)</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>idx</code></strong></dt>
+<dd>The index of the time step</dd>
+</dl>
+<p>Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+    &#34;&#34;&#34;
+    Returns the object at the given time point (given as index)
+    Args:
+        idx: The index of the time step
+
+    Returns:
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="spatial.geometry.Polygon"><code class="flex name class">
+<span>class <span class="ident">Polygon</span></span>
+<span>(</span><span>vertices: numpy.ndarray, color: <a title="spatial.geometry.IColor" href="#spatial.geometry.IColor">IColor</a> = IColor.N, convex_hull: bool = True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class representing a polygon</p>
+<p>Initializes a polygon object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>vertices</code></strong></dt>
+<dd>The vertices of the polygon</dd>
+<dt><strong><code>color</code></strong></dt>
+<dd>The color of the polygon. Default = IColor.N</dd>
+<dt><strong><code>convex_hull</code></strong></dt>
+<dd>bool to set if convex hull should be computed. Default = True</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Polygon(object):
+    &#34;&#34;&#34;
+    Class representing a polygon
+    &#34;&#34;&#34;
+    _id = 0
+    _ORIGIN = sh.Point([0, 0])  # origin for penetration depth computation
+    # _MinkowskiDiff = lambda a, b: sh.Polygon(np.vstack(np.repeat([a],len(b),axis=0)-b)).convex_hull
+    _MinkowskiDiff = lambda a, b: sh.Polygon(np.vstack([a - v for v in b])).convex_hull
+
+    @classmethod
+    def _get_id(cls):
+        cls._id += 1
+        return cls._id
+
+    def __init__(self, vertices: np.ndarray, color: IColor = IColor.N, convex_hull: bool = True):
+        &#34;&#34;&#34;
+        Initializes a polygon object
+        Args:
+            vertices: The vertices of the polygon
+            color: The color of the polygon. Default = IColor.N
+            convex_hull: bool to set if convex hull should be computed. Default = True
+        &#34;&#34;&#34;
+
+        assert isinstance(vertices, np.ndarray), &#39;&lt;Polygon/init&gt;: vertices must be of type np.ndarray!&#39;
+
+        if convex_hull:
+            self.shape = sh.Polygon(vertices).convex_hull
+        else:
+            self.shape = sh.Polygon(vertices)
+        self.color = color
+        self.id = self._get_id()
+
+    @property
+    def shape(self) -&gt; sh.Polygon:
+        &#34;&#34;&#34;
+        Returns the shapely polygon object of this polygon
+        Returns: Shapely polygon
+
+        &#34;&#34;&#34;
+        return self._shape
+
+    @shape.setter
+    def shape(self, shape: sh.Polygon):
+        &#34;&#34;&#34;
+        Sets the shapely polygon of this polygon
+        Args:
+            shape: The new shapely polygon
+
+        &#34;&#34;&#34;
+        assert isinstance(shape, sh.Polygon), &#39;&lt;Polygon/shape&gt;: Only shapely polygons are supported&#39;
+        self._shape = shape
+
+    @property
+    def vertices(self) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        Returns the vertices of the polygon
+        Returns: The vertices of the polygon as a numpy array
+
+        &#34;&#34;&#34;
+        return np.array(self.shape.exterior.coords)
+
+    @property
+    def center(self) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        Returns the geometric center of the polygon
+        Returns: Geometric center of the polygon as a numpy array
+
+        &#34;&#34;&#34;
+        return np.array(self.shape.centroid)
+
+    def enlarge(self, radius: float) -&gt; &#39;Polygon&#39;:
+        enlarged = self.shape.buffer(radius)
+        return Polygon(np.array(enlarged.exterior.coords))
+
+    def translate(self, t: np.ndarray):
+        &#34;&#34;&#34;
+        Translates the polygon by the given translation vector
+        Args:
+            t: Translation vector as numpy array with shape (2x1)
+
+        Returns: Translated version of this polygon (no copy)
+
+        &#34;&#34;&#34;
+
+        assert len(t) == 2
+        self.shape = af.translate(self.shape, t[0], t[1])
+        return self
+
+    def rotate(self, theta: float, from_origin: bool = True, use_radians=False):
+        &#34;&#34;&#34;
+        Rotates the polygon around its center (of its bounding box)
+        Args:
+            theta: The angle of the rotation
+            from_origin: currently not used
+            use_radians: True if angle is given in radian
+
+        Returns: Rotated version of this polygon (no copy)
+
+        &#34;&#34;&#34;
+
+        self.shape = af.rotate(self.shape, theta, origin=&#39;center&#39;, use_radians=use_radians)
+        return self
+
+    def distance(self, other: &#39;Polygon&#39;):
+        &#34;&#34;&#34;
+        Computes the distance to another polygon object
+        Args:
+            other: The other polygon object
+
+        Returns: The distance (&gt;=0) between this and the other object
+
+        &#34;&#34;&#34;
+        return self.shape.distance(other.shape)
+
+    def penetration_depth(self, other: &#39;Polygon&#39;):
+        &#34;&#34;&#34;
+        Computes the penetration depth with another polygon object
+        Args:
+            other: The other polygon object
+
+        Returns: The penetration depth (&gt;=0) between this and the other object.
+        Zero if no intersection between the objects.
+
+        &#34;&#34;&#34;
+        # return Polygon._MinkowskiDiff(np.asarray(self.shape.exterior.coords),
+        #                              np.asarray(other.shape.exterior.coords)).exterior.distance(self._ORIGIN)
+        return self._penetration_depth(np.asarray(self.shape.exterior.coords), np.asarray(other.shape.exterior.coords))
+
+    def _penetration_depth(self, vert1: np.ndarray, vert2: np.ndarray):
+        return Polygon._MinkowskiDiff(vert1, vert2).exterior.distance(self._ORIGIN)
+
+    def signed_distance(self, other: &#39;Polygon&#39;):
+        &#34;&#34;&#34;
+        Computes the signed distance of this polygon to another one
+        Args:
+            other: The other polygon
+
+        Returns: The signed distance between the two polygons (&lt;= 0 if touching/intersection, &gt;0 if no penetration)
+
+        &#34;&#34;&#34;
+        gjk = self.distance(other)
+        return gjk - self.penetration_depth(other) if gjk &lt;= 0.0000001 else gjk
+
+    def enclosedIn(self, other: &#39;Polygon&#39;):
+        &#34;&#34;&#34;
+        Computes if this polygon is enclosed in another polygon (i.e., all vertices are have negative signed distance)
+        Args:
+            other: The superset polygon
+
+        Returns: &gt;=0 if this polygon is enclosed in the other polygon, &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        sd = -np.inf
+        o = np.array(other.shape.exterior.coords)
+        for v in self.vertices:
+            gjk = other.shape.distance(sh.Point(v))
+            sd_c = gjk - self._penetration_depth(v, o) if gjk &lt; 0.0000001 else gjk
+            if sd_c &gt; sd:
+                sd = sd_c
+        return -sd if not np.isclose(sd, 0) else sd
+
+    def contains_point(self, point: np.ndarray):
+        &#34;&#34;&#34;
+        Checks whether a given point is enclosed in the polygon
+        Args:
+            point: The point to check
+
+        Returns: True if the point is enclosed in the polygon and False otherwise
+
+        &#34;&#34;&#34;
+        return self.shape.contains(sh.Point(point))
+
+    @property
+    def color(self) -&gt; IColor:
+        &#34;&#34;&#34;
+        Color of polygon
+        Returns: Color of polygon
+
+        &#34;&#34;&#34;
+        return self._color
+
+    @color.setter
+    def color(self, color: IColor):
+        &#34;&#34;&#34;
+        Color of polygon
+        Args:
+            color: New color of circle
+
+        &#34;&#34;&#34;
+        self._color = color
+
+    def plot(self, ax=None, alpha=1.0, label: bool = True, color=&#39;k&#39;):
+        &#34;&#34;&#34;
+        Plots the polygon
+        Args:
+            ax: The axis object to plot to (if provided)
+            alpha: The alpha value of the circle
+            label: bool to indicate whether to plot label
+
+        &#34;&#34;&#34;
+
+        if ax is None:
+            ax = plt.gca()
+
+        ax.add_patch(
+            mp.Polygon(self.vertices, color=color, alpha=alpha))
+        if label:
+            plt.text(self.center[0], self.center[1], s=str(self.id), c=&#39;white&#39;, bbox=dict(facecolor=&#39;white&#39;, alpha=0.5))
+
+    def minkowski_sum(self, other: &#39;Polygon&#39;, sub: bool = False) -&gt; &#39;Polygon&#39;:
+        new_vertices = list()
+        for v in other.vertices:
+            if not sub:
+                new_vertices.append(self.vertices + (v - other.center))
+            else:
+                new_vertices.append(self.vertices - (v - other.center))
+        return Polygon(np.vstack(new_vertices))
+
+    def __add__(self, other):
+        return self.minkowski_sum(other)
+
+    def __sub__(self, other):
+        return self.minkowski_sum(other, sub=True)
+
+    def __hash__(self):
+        return self.id</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="spatial.geometry.Circle" href="#spatial.geometry.Circle">Circle</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="spatial.geometry.Polygon.center"><code class="name">var <span class="ident">center</span> : numpy.ndarray</code></dt>
+<dd>
+<div class="desc"><p>Returns the geometric center of the polygon
+Returns: Geometric center of the polygon as a numpy array</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def center(self) -&gt; np.ndarray:
+    &#34;&#34;&#34;
+    Returns the geometric center of the polygon
+    Returns: Geometric center of the polygon as a numpy array
+
+    &#34;&#34;&#34;
+    return np.array(self.shape.centroid)</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.color"><code class="name">var <span class="ident">color</span> : <a title="spatial.geometry.IColor" href="#spatial.geometry.IColor">IColor</a></code></dt>
+<dd>
+<div class="desc"><p>Color of polygon
+Returns: Color of polygon</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def color(self) -&gt; IColor:
+    &#34;&#34;&#34;
+    Color of polygon
+    Returns: Color of polygon
+
+    &#34;&#34;&#34;
+    return self._color</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.shape"><code class="name">var <span class="ident">shape</span> : shapely.geometry.polygon.Polygon</code></dt>
+<dd>
+<div class="desc"><p>Returns the shapely polygon object of this polygon
+Returns: Shapely polygon</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def shape(self) -&gt; sh.Polygon:
+    &#34;&#34;&#34;
+    Returns the shapely polygon object of this polygon
+    Returns: Shapely polygon
+
+    &#34;&#34;&#34;
+    return self._shape</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.vertices"><code class="name">var <span class="ident">vertices</span> : numpy.ndarray</code></dt>
+<dd>
+<div class="desc"><p>Returns the vertices of the polygon
+Returns: The vertices of the polygon as a numpy array</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def vertices(self) -&gt; np.ndarray:
+    &#34;&#34;&#34;
+    Returns the vertices of the polygon
+    Returns: The vertices of the polygon as a numpy array
+
+    &#34;&#34;&#34;
+    return np.array(self.shape.exterior.coords)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="spatial.geometry.Polygon.contains_point"><code class="name flex">
+<span>def <span class="ident">contains_point</span></span>(<span>self, point: numpy.ndarray)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks whether a given point is enclosed in the polygon</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>point</code></strong></dt>
+<dd>The point to check</dd>
+</dl>
+<p>Returns: True if the point is enclosed in the polygon and False otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def contains_point(self, point: np.ndarray):
+    &#34;&#34;&#34;
+    Checks whether a given point is enclosed in the polygon
+    Args:
+        point: The point to check
+
+    Returns: True if the point is enclosed in the polygon and False otherwise
+
+    &#34;&#34;&#34;
+    return self.shape.contains(sh.Point(point))</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.distance"><code class="name flex">
+<span>def <span class="ident">distance</span></span>(<span>self, other: <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes the distance to another polygon object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other polygon object</dd>
+</dl>
+<p>Returns: The distance (&gt;=0) between this and the other object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def distance(self, other: &#39;Polygon&#39;):
+    &#34;&#34;&#34;
+    Computes the distance to another polygon object
+    Args:
+        other: The other polygon object
+
+    Returns: The distance (&gt;=0) between this and the other object
+
+    &#34;&#34;&#34;
+    return self.shape.distance(other.shape)</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.enclosedIn"><code class="name flex">
+<span>def <span class="ident">enclosedIn</span></span>(<span>self, other: <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this polygon is enclosed in another polygon (i.e., all vertices are have negative signed distance)</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The superset polygon</dd>
+</dl>
+<p>Returns: &gt;=0 if this polygon is enclosed in the other polygon, &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def enclosedIn(self, other: &#39;Polygon&#39;):
+    &#34;&#34;&#34;
+    Computes if this polygon is enclosed in another polygon (i.e., all vertices are have negative signed distance)
+    Args:
+        other: The superset polygon
+
+    Returns: &gt;=0 if this polygon is enclosed in the other polygon, &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    sd = -np.inf
+    o = np.array(other.shape.exterior.coords)
+    for v in self.vertices:
+        gjk = other.shape.distance(sh.Point(v))
+        sd_c = gjk - self._penetration_depth(v, o) if gjk &lt; 0.0000001 else gjk
+        if sd_c &gt; sd:
+            sd = sd_c
+    return -sd if not np.isclose(sd, 0) else sd</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.enlarge"><code class="name flex">
+<span>def <span class="ident">enlarge</span></span>(<span>self, radius: float) ‑> <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def enlarge(self, radius: float) -&gt; &#39;Polygon&#39;:
+    enlarged = self.shape.buffer(radius)
+    return Polygon(np.array(enlarged.exterior.coords))</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.minkowski_sum"><code class="name flex">
+<span>def <span class="ident">minkowski_sum</span></span>(<span>self, other: <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>, sub: bool = False) ‑> <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def minkowski_sum(self, other: &#39;Polygon&#39;, sub: bool = False) -&gt; &#39;Polygon&#39;:
+    new_vertices = list()
+    for v in other.vertices:
+        if not sub:
+            new_vertices.append(self.vertices + (v - other.center))
+        else:
+            new_vertices.append(self.vertices - (v - other.center))
+    return Polygon(np.vstack(new_vertices))</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.penetration_depth"><code class="name flex">
+<span>def <span class="ident">penetration_depth</span></span>(<span>self, other: <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes the penetration depth with another polygon object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other polygon object</dd>
+</dl>
+<p>Returns: The penetration depth (&gt;=0) between this and the other object.
+Zero if no intersection between the objects.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def penetration_depth(self, other: &#39;Polygon&#39;):
+    &#34;&#34;&#34;
+    Computes the penetration depth with another polygon object
+    Args:
+        other: The other polygon object
+
+    Returns: The penetration depth (&gt;=0) between this and the other object.
+    Zero if no intersection between the objects.
+
+    &#34;&#34;&#34;
+    # return Polygon._MinkowskiDiff(np.asarray(self.shape.exterior.coords),
+    #                              np.asarray(other.shape.exterior.coords)).exterior.distance(self._ORIGIN)
+    return self._penetration_depth(np.asarray(self.shape.exterior.coords), np.asarray(other.shape.exterior.coords))</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.plot"><code class="name flex">
+<span>def <span class="ident">plot</span></span>(<span>self, ax=None, alpha=1.0, label: bool = True, color='k')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plots the polygon</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>ax</code></strong></dt>
+<dd>The axis object to plot to (if provided)</dd>
+<dt><strong><code>alpha</code></strong></dt>
+<dd>The alpha value of the circle</dd>
+<dt><strong><code>label</code></strong></dt>
+<dd>bool to indicate whether to plot label</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def plot(self, ax=None, alpha=1.0, label: bool = True, color=&#39;k&#39;):
+    &#34;&#34;&#34;
+    Plots the polygon
+    Args:
+        ax: The axis object to plot to (if provided)
+        alpha: The alpha value of the circle
+        label: bool to indicate whether to plot label
+
+    &#34;&#34;&#34;
+
+    if ax is None:
+        ax = plt.gca()
+
+    ax.add_patch(
+        mp.Polygon(self.vertices, color=color, alpha=alpha))
+    if label:
+        plt.text(self.center[0], self.center[1], s=str(self.id), c=&#39;white&#39;, bbox=dict(facecolor=&#39;white&#39;, alpha=0.5))</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.rotate"><code class="name flex">
+<span>def <span class="ident">rotate</span></span>(<span>self, theta: float, from_origin: bool = True, use_radians=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Rotates the polygon around its center (of its bounding box)</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>theta</code></strong></dt>
+<dd>The angle of the rotation</dd>
+<dt><strong><code>from_origin</code></strong></dt>
+<dd>currently not used</dd>
+<dt><strong><code>use_radians</code></strong></dt>
+<dd>True if angle is given in radian</dd>
+</dl>
+<p>Returns: Rotated version of this polygon (no copy)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def rotate(self, theta: float, from_origin: bool = True, use_radians=False):
+    &#34;&#34;&#34;
+    Rotates the polygon around its center (of its bounding box)
+    Args:
+        theta: The angle of the rotation
+        from_origin: currently not used
+        use_radians: True if angle is given in radian
+
+    Returns: Rotated version of this polygon (no copy)
+
+    &#34;&#34;&#34;
+
+    self.shape = af.rotate(self.shape, theta, origin=&#39;center&#39;, use_radians=use_radians)
+    return self</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.signed_distance"><code class="name flex">
+<span>def <span class="ident">signed_distance</span></span>(<span>self, other: <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes the signed distance of this polygon to another one</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other polygon</dd>
+</dl>
+<p>Returns: The signed distance between the two polygons (&lt;= 0 if touching/intersection, &gt;0 if no penetration)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def signed_distance(self, other: &#39;Polygon&#39;):
+    &#34;&#34;&#34;
+    Computes the signed distance of this polygon to another one
+    Args:
+        other: The other polygon
+
+    Returns: The signed distance between the two polygons (&lt;= 0 if touching/intersection, &gt;0 if no penetration)
+
+    &#34;&#34;&#34;
+    gjk = self.distance(other)
+    return gjk - self.penetration_depth(other) if gjk &lt;= 0.0000001 else gjk</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.Polygon.translate"><code class="name flex">
+<span>def <span class="ident">translate</span></span>(<span>self, t: numpy.ndarray)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Translates the polygon by the given translation vector</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>t</code></strong></dt>
+<dd>Translation vector as numpy array with shape (2x1)</dd>
+</dl>
+<p>Returns: Translated version of this polygon (no copy)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def translate(self, t: np.ndarray):
+    &#34;&#34;&#34;
+    Translates the polygon by the given translation vector
+    Args:
+        t: Translation vector as numpy array with shape (2x1)
+
+    Returns: Translated version of this polygon (no copy)
+
+    &#34;&#34;&#34;
+
+    assert len(t) == 2
+    self.shape = af.translate(self.shape, t[0], t[1])
+    return self</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="spatial.geometry.PolygonCollection"><code class="flex name class">
+<span>class <span class="ident">PolygonCollection</span></span>
+<span>(</span><span>polygons: Set[<a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Implements spatial interface for objects of type polytope. Represents set of polytopes</p>
+<p>Initializes a circle collection with a set of circles</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>circles</code></strong></dt>
+<dd>Set of circles</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PolygonCollection(SpatialInterface):
+    &#34;&#34;&#34;
+        Implements spatial interface for objects of type polytope. Represents set of polytopes
+        &#34;&#34;&#34;
+
+    def __init__(self, polygons: Set[Polygon]):
+        &#34;&#34;&#34;
+        Initializes a circle collection with a set of circles
+        Args:
+            circles: Set of circles
+        &#34;&#34;&#34;
+        self.polygons = polygons if isinstance(polygons, set) else set(polygons)
+
+    @property
+    def polygons(self) -&gt; Set[Polygon]:
+        &#34;&#34;&#34;
+        Set of polygons
+        Returns: set of polytopes
+
+        &#34;&#34;&#34;
+        return self._polygons
+
+    @polygons.setter
+    def polygons(self, polygons: Set[Polygon]):
+        &#34;&#34;&#34;
+        Set of polygons
+        Args:
+            polygons: new set of polytopes
+
+        Returns:
+
+        &#34;&#34;&#34;
+        self._polygons = polygons
+
+    def add(self, p: Polygon):
+        &#34;&#34;&#34;
+        Adds a polygons object to this collection
+        Args:
+            p: The polygons to add
+
+
+        &#34;&#34;&#34;
+        self.polygons.add(p)
+
+    def remove(self, p: Polygon):
+        &#34;&#34;&#34;
+        Removes a polygons from this collection
+        Args:
+            p: The polygons to remove
+
+
+        &#34;&#34;&#34;
+        self.polygons.discard(p)
+
+    def shapes(self) -&gt; set:
+        return self.polygons
+
+    def of_color(self, color: IColor) -&gt; &#39;PolygoneCollection&#39;:
+        &#34;&#34;&#34;
+        Returns a polygons collection containing polytopes of the specified color
+        Args:
+            color: The specified color
+
+        Returns: polygons collection containing polytopes of specific color
+
+        &#34;&#34;&#34;
+        return PolygonCollection(set([p for p in self.polygons if p.color == color]))
+
+    def plot(self, ax=None, color=&#39;k&#39;, label=True):
+        &#34;&#34;&#34;
+        Draws all polygons in this collection
+        Args:
+            ax: The axis object to plot to
+            label: bool to indicate whether to plot labels
+
+        Returns:
+
+        &#34;&#34;&#34;
+        if ax is None:
+            ax = plt.gca()
+        for p in self.polygons:
+            p.plot(ax=ax, label=label, color=color)
+        plt.autoscale()
+        plt.axis(&#39;equal&#39;)
+
+    def distance(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        assert isinstance(other, PolygonCollection), \
+            &#39;&lt;Polygon/distance&gt;: Other object must be of type polygon, got {}&#39;.format(other)
+
+        # compute distances
+
+        result = list()
+        for p in self.polygons:
+            result.append([p.signed_distance(o) for o in other.polygons])
+
+        return result
+
+    def overlap(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        # intersection polygons
+        inter = list()
+        for p in self.polygons:
+            inter.append([-p.signed_distance(o) for o in other.polygons])
+        inter = np.array(inter)
+
+        return np.max(inter)
+
+    def enclosed_in(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        enclosed = list()
+        for p in self.polygons:
+            enclosed.append(np.array([p.enclosedIn(o) for o in other.polygons]).max())
+        return np.array(enclosed).min()
+
+    def proximity(self, other: &#39;SpatialInterface&#39;, eps: float) -&gt; bool:
+        return self.distance_compare(other, eps, np.less_equal)
+
+    def distance_compare(self, other: &#39;SpatialInterface&#39;, eps: float, fun):
+        assert np.positive(eps), &#39;&lt;Polygon&gt;: Epsilon must be positive, got {}&#39;.format(eps)
+
+        # compute result
+        if fun == np.less_equal:
+            return np.max(np.repeat(eps, len(other.polygons)) - self.distance(other))
+        if fun == np.greater_equal:
+            return np.max(self.distance(other) - np.repeat(eps, len(other.polygons)))
+        if fun == np.equal:
+            return np.min([np.max(np.repeat(eps, len(other.polygons)) - self.distance(other)),
+                           np.max(self.distance(other) - np.repeat(eps, len(other.polygons)))])
+
+    def touching(self, other: &#39;SpatialInterface&#39;, eps: float = 5) -&gt; bool:
+        return self.proximity(other, eps=eps)
+        return np.min([self.proximity(other, eps=eps), -self.proximity(other, eps=-eps)])
+
+    def _min(self, axis: int) -&gt; float:
+        &#34;&#34;&#34;
+        Returns the minimum value of the projection of all polygons to the specified axis
+        Args:
+            axis: The specified axis
+
+        Returns: The minimum value along the specified axis
+
+        &#34;&#34;&#34;
+        return np.min([c.center[axis] for c in self.polygons])
+
+    def _max(self, axis: int) -&gt; float:
+        &#34;&#34;&#34;
+        Returns the maximum value of the projection of all polygons to the specified axis
+        Args:
+            axis: The specified axis
+
+        Returns: The maximum value along the specified axis
+
+        &#34;&#34;&#34;
+        return np.max([c.center[axis] for c in self.polygons])
+
+    def left_of(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return other._min(0) - self._max(0)
+
+    def right_of(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return self._min(0) - other._max(0)
+
+    def above(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return self._min(1) - other._max(1)
+
+    def below(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return other._min(1) - self._max(1)
+
+    def close_to(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return self.proximity(other, 70.)
+
+    def far_from(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        return -self.proximity(other, 150)
+
+    def closer_to_than(self, closer: &#39;SpatialInterface&#39;, than: &#39;SpatialInterface&#39;) -&gt; float:
+        return np.min(self.distance(than)) - np.min(self.distance(closer))
+
+    def enlarge(self, radius: float) -&gt; &#39;SpatialInterface&#39;:
+        return PolygonCollection(set([p.enlarge(radius) for p in self.polygons]))
+
+    def angle(self, other: &#39;CircleOLD&#39;) -&gt; float:
+        pass
+
+    def __or__(self, other: &#39;PolytopeCollection&#39;):
+        return PolygonCollection(self.polygons | other.polygons)
+
+    def __sub__(self, other: &#39;PolytopeCollection&#39;):
+        return PolygonCollection(self.polygons - other.polygons)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="spatial.geometry.PolygonCollection.polygons"><code class="name">var <span class="ident">polygons</span> : Set[<a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>]</code></dt>
+<dd>
+<div class="desc"><p>Set of polygons
+Returns: set of polytopes</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def polygons(self) -&gt; Set[Polygon]:
+    &#34;&#34;&#34;
+    Set of polygons
+    Returns: set of polytopes
+
+    &#34;&#34;&#34;
+    return self._polygons</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="spatial.geometry.PolygonCollection.add"><code class="name flex">
+<span>def <span class="ident">add</span></span>(<span>self, p: <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds a polygons object to this collection</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>p</code></strong></dt>
+<dd>The polygons to add</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add(self, p: Polygon):
+    &#34;&#34;&#34;
+    Adds a polygons object to this collection
+    Args:
+        p: The polygons to add
+
+
+    &#34;&#34;&#34;
+    self.polygons.add(p)</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.PolygonCollection.of_color"><code class="name flex">
+<span>def <span class="ident">of_color</span></span>(<span>self, color: <a title="spatial.geometry.IColor" href="#spatial.geometry.IColor">IColor</a>) ‑> PolygoneCollection</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a polygons collection containing polytopes of the specified color</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>color</code></strong></dt>
+<dd>The specified color</dd>
+</dl>
+<p>Returns: polygons collection containing polytopes of specific color</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def of_color(self, color: IColor) -&gt; &#39;PolygoneCollection&#39;:
+    &#34;&#34;&#34;
+    Returns a polygons collection containing polytopes of the specified color
+    Args:
+        color: The specified color
+
+    Returns: polygons collection containing polytopes of specific color
+
+    &#34;&#34;&#34;
+    return PolygonCollection(set([p for p in self.polygons if p.color == color]))</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.PolygonCollection.plot"><code class="name flex">
+<span>def <span class="ident">plot</span></span>(<span>self, ax=None, color='k', label=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Draws all polygons in this collection</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>ax</code></strong></dt>
+<dd>The axis object to plot to</dd>
+<dt><strong><code>label</code></strong></dt>
+<dd>bool to indicate whether to plot labels</dd>
+</dl>
+<p>Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def plot(self, ax=None, color=&#39;k&#39;, label=True):
+    &#34;&#34;&#34;
+    Draws all polygons in this collection
+    Args:
+        ax: The axis object to plot to
+        label: bool to indicate whether to plot labels
+
+    Returns:
+
+    &#34;&#34;&#34;
+    if ax is None:
+        ax = plt.gca()
+    for p in self.polygons:
+        p.plot(ax=ax, label=label, color=color)
+    plt.autoscale()
+    plt.axis(&#39;equal&#39;)</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.PolygonCollection.remove"><code class="name flex">
+<span>def <span class="ident">remove</span></span>(<span>self, p: <a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes a polygons from this collection</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>p</code></strong></dt>
+<dd>The polygons to remove</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove(self, p: Polygon):
+    &#34;&#34;&#34;
+    Removes a polygons from this collection
+    Args:
+        p: The polygons to remove
+
+
+    &#34;&#34;&#34;
+    self.polygons.discard(p)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a></b></code>:
+<ul class="hlist">
+<li><code><a title="spatial.geometry.SpatialInterface.above" href="#spatial.geometry.SpatialInterface.above">above</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.angle" href="#spatial.geometry.SpatialInterface.angle">angle</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.below" href="#spatial.geometry.SpatialInterface.below">below</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.close_to" href="#spatial.geometry.SpatialInterface.close_to">close_to</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.closer_to_than" href="#spatial.geometry.SpatialInterface.closer_to_than">closer_to_than</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.distance" href="#spatial.geometry.SpatialInterface.distance">distance</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.distance_compare" href="#spatial.geometry.SpatialInterface.distance_compare">distance_compare</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.enclosed_in" href="#spatial.geometry.SpatialInterface.enclosed_in">enclosed_in</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.enlarge" href="#spatial.geometry.SpatialInterface.enlarge">enlarge</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.far_from" href="#spatial.geometry.SpatialInterface.far_from">far_from</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.left_of" href="#spatial.geometry.SpatialInterface.left_of">left_of</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.overlap" href="#spatial.geometry.SpatialInterface.overlap">overlap</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.proximity" href="#spatial.geometry.SpatialInterface.proximity">proximity</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.right_of" href="#spatial.geometry.SpatialInterface.right_of">right_of</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.shapes" href="#spatial.geometry.SpatialInterface.shapes">shapes</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.touching" href="#spatial.geometry.SpatialInterface.touching">touching</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="spatial.geometry.SpatialInterface"><code class="flex name class">
+<span>class <span class="ident">SpatialInterface</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Interface for spatial relation logic. All objects need to provide a quantitative semantic.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SpatialInterface(ABC):
+    &#34;&#34;&#34;
+    Interface for spatial relation logic. All objects need to provide a quantitative semantic.
+    &#34;&#34;&#34;
+
+    @abstractmethod
+    def shapes(self) -&gt; set:
+        &#34;&#34;&#34;
+        Returns the shapes stored in the SpatialInterface object
+        Returns: The shapes of the SpatialInterface object
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def distance(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        &#34;&#34;&#34;
+        Returns the signed distance to another spatial interface object
+        Args:
+            other: The other spatial interface object
+
+        Returns: Distance (squared) to other object
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def overlap(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        &#34;&#34;&#34;
+        Computes if this object overlaps with another object
+        Args:
+            other: The other object
+
+        Returns: &gt;=0 if both objects overlap and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def enclosed_in(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+        &#34;&#34;&#34;
+        Computes if this objects is enclosed in another object. If any this object is a collection, every object
+        must be enclosed in an object of other
+        Args:
+            other: The other object
+
+        Returns: &gt;=0 if this object is enclosed in the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def proximity(self, other: &#39;SpatialInterface&#39;, eps: float) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this objects is in proximity to another object
+        Args:
+            other: The other object
+            eps: Specification of proximity
+
+        Returns: &gt;=0 if objects are in proximity and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def distance_compare(self, other: &#39;SpatialInterface&#39;, eps: float, fun) -&gt; bool:
+        &#34;&#34;&#34;
+        Compares the distance between two objects and a target value (e.g., a dist b &lt;= eps)
+        Args:
+            other: The other object
+            eps: The target value
+            fun: The function for comparing (&lt;=,&gt;=,==)
+
+        Returns: &gt;=0 if predicate is true and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def touching(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if two objects are touching
+        Args:
+            other: The other object
+
+        Returns:
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def angle(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes the angle between to objects
+        Args:
+            other: The other object
+
+        Returns: NOT YET IMPLEMENTED / USED
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def above(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is above another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is above the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def below(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is below another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is below the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def left_of(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is left of another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is left of the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def right_of(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is right of another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is right of the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def close_to(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is close to another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is close to the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def far_from(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is far from another object
+        Args:
+            other: The other object
+
+        Returns: &gt;= 0 if this object is far from the other object and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def closer_to_than(self, closer: &#39;SpatialInterface&#39;, than: &#39;SpatialInterface&#39;) -&gt; bool:
+        &#34;&#34;&#34;
+        Computes if this object is closer to one object than another
+        Args:
+            closer: The object that should be closer
+            than: The object that should be further away
+
+        Returns: &gt;= 0 if this object is closer to one object than another and &lt;0 otherwise
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def enlarge(self, radius: float) -&gt; &#39;SpatialInterface&#39;:
+        &#34;&#34;&#34;
+        Enlarges an object with a given radius
+        Args:
+            radius: The radius for enlarging the object
+
+        Returns: The enlarged object
+
+        &#34;&#34;&#34;
+        pass
+
+    @abstractmethod
+    def __or__(self, other: &#39;SpatialInterface&#39;):
+        pass
+
+    @abstractmethod
+    def __sub__(self, other: &#39;SpatialInterface&#39;):
+        pass</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="spatial.geometry.PolygonCollection" href="#spatial.geometry.PolygonCollection">PolygonCollection</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="spatial.geometry.SpatialInterface.above"><code class="name flex">
+<span>def <span class="ident">above</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this object is above another object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: &gt;= 0 if this object is above the other object and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def above(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if this object is above another object
+    Args:
+        other: The other object
+
+    Returns: &gt;= 0 if this object is above the other object and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.angle"><code class="name flex">
+<span>def <span class="ident">angle</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes the angle between to objects</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: NOT YET IMPLEMENTED / USED</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def angle(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes the angle between to objects
+    Args:
+        other: The other object
+
+    Returns: NOT YET IMPLEMENTED / USED
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.below"><code class="name flex">
+<span>def <span class="ident">below</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this object is below another object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: &gt;= 0 if this object is below the other object and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def below(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if this object is below another object
+    Args:
+        other: The other object
+
+    Returns: &gt;= 0 if this object is below the other object and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.close_to"><code class="name flex">
+<span>def <span class="ident">close_to</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this object is close to another object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: &gt;= 0 if this object is close to the other object and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def close_to(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if this object is close to another object
+    Args:
+        other: The other object
+
+    Returns: &gt;= 0 if this object is close to the other object and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.closer_to_than"><code class="name flex">
+<span>def <span class="ident">closer_to_than</span></span>(<span>self, closer: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>, than: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this object is closer to one object than another</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>closer</code></strong></dt>
+<dd>The object that should be closer</dd>
+<dt><strong><code>than</code></strong></dt>
+<dd>The object that should be further away</dd>
+</dl>
+<p>Returns: &gt;= 0 if this object is closer to one object than another and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def closer_to_than(self, closer: &#39;SpatialInterface&#39;, than: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if this object is closer to one object than another
+    Args:
+        closer: The object that should be closer
+        than: The object that should be further away
+
+    Returns: &gt;= 0 if this object is closer to one object than another and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.distance"><code class="name flex">
+<span>def <span class="ident">distance</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the signed distance to another spatial interface object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other spatial interface object</dd>
+</dl>
+<p>Returns: Distance (squared) to other object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def distance(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+    &#34;&#34;&#34;
+    Returns the signed distance to another spatial interface object
+    Args:
+        other: The other spatial interface object
+
+    Returns: Distance (squared) to other object
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.distance_compare"><code class="name flex">
+<span>def <span class="ident">distance_compare</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>, eps: float, fun) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Compares the distance between two objects and a target value (e.g., a dist b &lt;= eps)</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+<dt><strong><code>eps</code></strong></dt>
+<dd>The target value</dd>
+<dt><strong><code>fun</code></strong></dt>
+<dd>The function for comparing (&lt;=,&gt;=,==)</dd>
+</dl>
+<p>Returns: &gt;=0 if predicate is true and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def distance_compare(self, other: &#39;SpatialInterface&#39;, eps: float, fun) -&gt; bool:
+    &#34;&#34;&#34;
+    Compares the distance between two objects and a target value (e.g., a dist b &lt;= eps)
+    Args:
+        other: The other object
+        eps: The target value
+        fun: The function for comparing (&lt;=,&gt;=,==)
+
+    Returns: &gt;=0 if predicate is true and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.enclosed_in"><code class="name flex">
+<span>def <span class="ident">enclosed_in</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this objects is enclosed in another object. If any this object is a collection, every object
+must be enclosed in an object of other</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: &gt;=0 if this object is enclosed in the other object and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def enclosed_in(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+    &#34;&#34;&#34;
+    Computes if this objects is enclosed in another object. If any this object is a collection, every object
+    must be enclosed in an object of other
+    Args:
+        other: The other object
+
+    Returns: &gt;=0 if this object is enclosed in the other object and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.enlarge"><code class="name flex">
+<span>def <span class="ident">enlarge</span></span>(<span>self, radius: float) ‑> <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enlarges an object with a given radius</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>radius</code></strong></dt>
+<dd>The radius for enlarging the object</dd>
+</dl>
+<p>Returns: The enlarged object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def enlarge(self, radius: float) -&gt; &#39;SpatialInterface&#39;:
+    &#34;&#34;&#34;
+    Enlarges an object with a given radius
+    Args:
+        radius: The radius for enlarging the object
+
+    Returns: The enlarged object
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.far_from"><code class="name flex">
+<span>def <span class="ident">far_from</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this object is far from another object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: &gt;= 0 if this object is far from the other object and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def far_from(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if this object is far from another object
+    Args:
+        other: The other object
+
+    Returns: &gt;= 0 if this object is far from the other object and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.left_of"><code class="name flex">
+<span>def <span class="ident">left_of</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this object is left of another object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: &gt;= 0 if this object is left of the other object and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def left_of(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if this object is left of another object
+    Args:
+        other: The other object
+
+    Returns: &gt;= 0 if this object is left of the other object and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.overlap"><code class="name flex">
+<span>def <span class="ident">overlap</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this object overlaps with another object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: &gt;=0 if both objects overlap and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def overlap(self, other: &#39;SpatialInterface&#39;) -&gt; float:
+    &#34;&#34;&#34;
+    Computes if this object overlaps with another object
+    Args:
+        other: The other object
+
+    Returns: &gt;=0 if both objects overlap and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.proximity"><code class="name flex">
+<span>def <span class="ident">proximity</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>, eps: float) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this objects is in proximity to another object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+<dt><strong><code>eps</code></strong></dt>
+<dd>Specification of proximity</dd>
+</dl>
+<p>Returns: &gt;=0 if objects are in proximity and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def proximity(self, other: &#39;SpatialInterface&#39;, eps: float) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if this objects is in proximity to another object
+    Args:
+        other: The other object
+        eps: Specification of proximity
+
+    Returns: &gt;=0 if objects are in proximity and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.right_of"><code class="name flex">
+<span>def <span class="ident">right_of</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if this object is right of another object</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns: &gt;= 0 if this object is right of the other object and &lt;0 otherwise</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def right_of(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if this object is right of another object
+    Args:
+        other: The other object
+
+    Returns: &gt;= 0 if this object is right of the other object and &lt;0 otherwise
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.shapes"><code class="name flex">
+<span>def <span class="ident">shapes</span></span>(<span>self) ‑> set</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the shapes stored in the SpatialInterface object
+Returns: The shapes of the SpatialInterface object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def shapes(self) -&gt; set:
+    &#34;&#34;&#34;
+    Returns the shapes stored in the SpatialInterface object
+    Returns: The shapes of the SpatialInterface object
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="spatial.geometry.SpatialInterface.touching"><code class="name flex">
+<span>def <span class="ident">touching</span></span>(<span>self, other: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes if two objects are touching</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong></dt>
+<dd>The other object</dd>
+</dl>
+<p>Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def touching(self, other: &#39;SpatialInterface&#39;) -&gt; bool:
+    &#34;&#34;&#34;
+    Computes if two objects are touching
+    Args:
+        other: The other object
+
+    Returns:
+
+    &#34;&#34;&#34;
+    pass</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="spatial.geometry.StaticObject"><code class="flex name class">
+<span>class <span class="ident">StaticObject</span></span>
+<span>(</span><span>spatial_object: <a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An SpatialInterface object static in time. The simplest implementation of ObjectInTime</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StaticObject(ObjectInTime):
+    &#34;&#34;&#34;
+    An SpatialInterface object static in time. The simplest implementation of ObjectInTime
+    &#34;&#34;&#34;
+
+    def __init__(self, spatial_object: SpatialInterface):
+        super().__init__()
+        self._spatial_obj = spatial_object
+
+    def getObject(self, time) -&gt; &#39;SpatialInterface&#39;:
+        return self._spatial_obj
+
+    def getObjectByIndex(self, idx: int) -&gt; &#39;SpatialInterface&#39;:
+        return self._spatial_obj
+
+    def __or__(self, other):
+        if isinstance(other, (StaticObject, DynamicObject)):
+            return ObjectCollection(self, other)
+        elif isinstance(other, ObjectCollection):
+            return other + self
+        else:
+            raise Exception(&#39;&lt;DynamicObject/add&gt;: Provided object not supported! other = {}&#39;.format(other))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="spatial.geometry.ObjectInTime" href="#spatial.geometry.ObjectInTime">ObjectInTime</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="spatial.geometry.ObjectInTime" href="#spatial.geometry.ObjectInTime">ObjectInTime</a></b></code>:
+<ul class="hlist">
+<li><code><a title="spatial.geometry.ObjectInTime.getObject" href="#spatial.geometry.ObjectInTime.getObject">getObject</a></code></li>
+<li><code><a title="spatial.geometry.ObjectInTime.getObjectByIndex" href="#spatial.geometry.ObjectInTime.getObjectByIndex">getObjectByIndex</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spatial" href="index.html">spatial</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="spatial.geometry.Circle" href="#spatial.geometry.Circle">Circle</a></code></h4>
+</li>
+<li>
+<h4><code><a title="spatial.geometry.DynamicObject" href="#spatial.geometry.DynamicObject">DynamicObject</a></code></h4>
+<ul class="">
+<li><code><a title="spatial.geometry.DynamicObject.addObject" href="#spatial.geometry.DynamicObject.addObject">addObject</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="spatial.geometry.IColor" href="#spatial.geometry.IColor">IColor</a></code></h4>
+<ul class="">
+<li><code><a title="spatial.geometry.IColor.B" href="#spatial.geometry.IColor.B">B</a></code></li>
+<li><code><a title="spatial.geometry.IColor.G" href="#spatial.geometry.IColor.G">G</a></code></li>
+<li><code><a title="spatial.geometry.IColor.N" href="#spatial.geometry.IColor.N">N</a></code></li>
+<li><code><a title="spatial.geometry.IColor.R" href="#spatial.geometry.IColor.R">R</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="spatial.geometry.ObjectCollection" href="#spatial.geometry.ObjectCollection">ObjectCollection</a></code></h4>
+<ul class="">
+<li><code><a title="spatial.geometry.ObjectCollection.objects" href="#spatial.geometry.ObjectCollection.objects">objects</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="spatial.geometry.ObjectInTime" href="#spatial.geometry.ObjectInTime">ObjectInTime</a></code></h4>
+<ul class="">
+<li><code><a title="spatial.geometry.ObjectInTime.getObject" href="#spatial.geometry.ObjectInTime.getObject">getObject</a></code></li>
+<li><code><a title="spatial.geometry.ObjectInTime.getObjectByIndex" href="#spatial.geometry.ObjectInTime.getObjectByIndex">getObjectByIndex</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="spatial.geometry.Polygon" href="#spatial.geometry.Polygon">Polygon</a></code></h4>
+<ul class="two-column">
+<li><code><a title="spatial.geometry.Polygon.center" href="#spatial.geometry.Polygon.center">center</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.color" href="#spatial.geometry.Polygon.color">color</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.contains_point" href="#spatial.geometry.Polygon.contains_point">contains_point</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.distance" href="#spatial.geometry.Polygon.distance">distance</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.enclosedIn" href="#spatial.geometry.Polygon.enclosedIn">enclosedIn</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.enlarge" href="#spatial.geometry.Polygon.enlarge">enlarge</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.minkowski_sum" href="#spatial.geometry.Polygon.minkowski_sum">minkowski_sum</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.penetration_depth" href="#spatial.geometry.Polygon.penetration_depth">penetration_depth</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.plot" href="#spatial.geometry.Polygon.plot">plot</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.rotate" href="#spatial.geometry.Polygon.rotate">rotate</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.shape" href="#spatial.geometry.Polygon.shape">shape</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.signed_distance" href="#spatial.geometry.Polygon.signed_distance">signed_distance</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.translate" href="#spatial.geometry.Polygon.translate">translate</a></code></li>
+<li><code><a title="spatial.geometry.Polygon.vertices" href="#spatial.geometry.Polygon.vertices">vertices</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="spatial.geometry.PolygonCollection" href="#spatial.geometry.PolygonCollection">PolygonCollection</a></code></h4>
+<ul class="">
+<li><code><a title="spatial.geometry.PolygonCollection.add" href="#spatial.geometry.PolygonCollection.add">add</a></code></li>
+<li><code><a title="spatial.geometry.PolygonCollection.of_color" href="#spatial.geometry.PolygonCollection.of_color">of_color</a></code></li>
+<li><code><a title="spatial.geometry.PolygonCollection.plot" href="#spatial.geometry.PolygonCollection.plot">plot</a></code></li>
+<li><code><a title="spatial.geometry.PolygonCollection.polygons" href="#spatial.geometry.PolygonCollection.polygons">polygons</a></code></li>
+<li><code><a title="spatial.geometry.PolygonCollection.remove" href="#spatial.geometry.PolygonCollection.remove">remove</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="spatial.geometry.SpatialInterface" href="#spatial.geometry.SpatialInterface">SpatialInterface</a></code></h4>
+<ul class="two-column">
+<li><code><a title="spatial.geometry.SpatialInterface.above" href="#spatial.geometry.SpatialInterface.above">above</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.angle" href="#spatial.geometry.SpatialInterface.angle">angle</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.below" href="#spatial.geometry.SpatialInterface.below">below</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.close_to" href="#spatial.geometry.SpatialInterface.close_to">close_to</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.closer_to_than" href="#spatial.geometry.SpatialInterface.closer_to_than">closer_to_than</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.distance" href="#spatial.geometry.SpatialInterface.distance">distance</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.distance_compare" href="#spatial.geometry.SpatialInterface.distance_compare">distance_compare</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.enclosed_in" href="#spatial.geometry.SpatialInterface.enclosed_in">enclosed_in</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.enlarge" href="#spatial.geometry.SpatialInterface.enlarge">enlarge</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.far_from" href="#spatial.geometry.SpatialInterface.far_from">far_from</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.left_of" href="#spatial.geometry.SpatialInterface.left_of">left_of</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.overlap" href="#spatial.geometry.SpatialInterface.overlap">overlap</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.proximity" href="#spatial.geometry.SpatialInterface.proximity">proximity</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.right_of" href="#spatial.geometry.SpatialInterface.right_of">right_of</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.shapes" href="#spatial.geometry.SpatialInterface.shapes">shapes</a></code></li>
+<li><code><a title="spatial.geometry.SpatialInterface.touching" href="#spatial.geometry.SpatialInterface.touching">touching</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="spatial.geometry.StaticObject" href="#spatial.geometry.StaticObject">StaticObject</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

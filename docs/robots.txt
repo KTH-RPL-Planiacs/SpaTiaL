@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://kth-rpl-planiacs.github.io/SpaTiaL/sitemap.xml

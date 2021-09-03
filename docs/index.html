@@ -1,250 +1,75 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="preload" as="font" href="https://kth-rpl-planiacs.github.io/SpaTiaL/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="font" href="https://kth-rpl-planiacs.github.io/SpaTiaL/fonts/vendor/jost/jost-v4-latin-700.woff2"  type="font/woff2" crossorigin>
-
-
-<link rel="stylesheet" href="https://kth-rpl-planiacs.github.io/SpaTiaL/main.css">
-
-
-
-  
-  
-    
-  
-
-
-  
-    
-  
-  
-  
-    
-  
-  
-  
-  
-  
-
-
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-
-
-	
-
-
-	
-
-<title>SpaTiaL | A framework for object-centric specification</title>
-<meta name="description" content="SpaTiaL is a framework to specify spatial and temporal relations between objects.">
-<link rel="canonical" href="https://kth-rpl-planiacs.github.io/SpaTiaL/">
-
-
-
-
-  
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "/",
-      "name": "SpaTiaL",
-      "logo": "/logo-doks.png",
-      "sameAs": [
-        "https://twitter.com/g_schup",
-        
-        "https://github.com/KTH-RPL-Planiacs/SpaTiaL"
-      ]
-    }
-    </script>
-  
-  
-  
-
-
-
-
-
-
-
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "BreadcrumbList",
-    
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Home",
-      "item": "https://kth-rpl-planiacs.github.io/SpaTiaL/"
-    },
-    
-  }
-</script>
-
-
-
-
-  <meta name="theme-color" content="#fff">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://kth-rpl-planiacs.github.io/SpaTiaL/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://kth-rpl-planiacs.github.io/SpaTiaL/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://kth-rpl-planiacs.github.io/SpaTiaL/favicon-16x16.png">
-  
-    <link rel="manifest" href="https://kth-rpl-planiacs.github.io/SpaTiaL/site.webmanifest">
-  
-
-
-  
-
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>spatial API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
 </head>
-
-<body class="home">
-  
-    
-<div class="header-bar fixed-top"></div>
-<header class="navbar fixed-top navbar-expand-md navbar-light">
-	<div class="container">
-		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
-		<label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
-		<a class="navbar-brand order-1 order-md-0 me-auto" href="https://kth-rpl-planiacs.github.io/SpaTiaL/">SpaTiaL</a>
-		<button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
-			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
-			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
-		</button>
-		<ul class="navbar-nav fork-me order-3 order-md-5">
-			
-				
-					<li class="nav-item">
-						<a class="nav-link" href="https://twitter.com/g_schup"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
-					</li>
-				
-					<li class="nav-item">
-						<a class="nav-link" href="https://github.com/KTH-RPL-Planiacs/SpaTiaL"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
-					</li>
-				
-			
-		</ul>
-		<div class="collapse navbar-collapse order-4 order-md-1">
-			<ul class="navbar-nav main-nav me-auto order-5 order-md-2">
-				
-					
-						<li class="nav-item">
-							<a class="nav-link" href="https://kth-rpl-planiacs.github.io/SpaTiaL/docs/getting-started/introduction/">Docs</a>
-						</li>
-					
-						<li class="nav-item">
-							<a class="nav-link" href="https://kth-rpl-planiacs.github.io/SpaTiaL/blog/">Blog</a>
-						</li>
-					
-				
-			</ul>
-			<div class="break order-6 d-md-none"></div>
-			
-				<form class="navbar-form flex-grow-1 order-7 order-md-3">
-					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
-						aria-label="Search docs..." autocomplete="off">
-					<div id="suggestions" class="shadow bg-white rounded"></div>
-				</form>
-			
-		</div>
-	</div>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Package <code>spatial</code></h1>
 </header>
-
-  
-
-  
-<div class="wrap container" role="document">
-  <div class="content">
-    <section class="section container-fluid mt-n3 pb-3">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
-          <h1 class="mt-0">Object-Centric Specification for Robotic Tasks</h1>
-        </div>
-        <div class="col-lg-9 col-xl-8 text-center">
-          <p class="lead"><b>SpaTiaL</b> is a framework to specify spatial and temporal relations between objects.</p>
-          <a class="btn btn-primary btn-lg px-4 mb-2" href="https://kth-rpl-planiacs.github.io/SpaTiaL/docs/getting-started/introduction" role="button">Get started</a>
-          <p class="meta">Open-source MIT License. <a href="https://github.com/KTH-RPL-Planiacs/SpaTiaL">GitHub</a></p>
-        </div>
-      </div>
-    </section>
-  </div>
+<section id="section-intro">
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="spatial.automaton_planning" href="automaton_planning.html">spatial.automaton_planning</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="spatial.geometry" href="geometry.html">spatial.geometry</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="spatial.logic" href="logic.html">spatial.logic</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="spatial.ltlf2dfa_nx" href="ltlf2dfa_nx.html">spatial.ltlf2dfa_nx</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
 </div>
-
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      
-        
-        <div class="col-lg-5">
-          <h2 class="h4">Feature 1</h2>
-          <p>Description 1</p>
-        </div>
-        
-        <div class="col-lg-5">
-          <h2 class="h4">Feature 2</h2>
-          <p>Description 2</p>
-        </div>
-        
-        <div class="col-lg-5">
-          <h2 class="h4">Feature 3</h2>
-          <p>Description 3</p>
-        </div>
-        
-      
-    </div>
-  </div>
-</section>
-
-<section class="section section-sm container-fluid">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-9"></div>
-  </div>
-</section>
-
-
-  
-    
-<footer class="footer text-muted">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 order-last order-lg-first">
-				<ul class="list-inline">
-					
-						<li class="list-inline-item">Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a></li>
-					
-				</ul>
-			</div>
-			<div class="col-lg-8 order-first order-lg-last text-lg-end">
-				<ul class="list-inline">
-					
-						
-							<li class="list-inline-item"><a href="https://kth-rpl-planiacs.github.io/SpaTiaL/privacy-policy/">Privacy</a></li>
-						
-							<li class="list-inline-item"><a href="https://kth-rpl-planiacs.github.io/SpaTiaL/docs/contributing/code-of-conduct/">Code of Conduct</a></li>
-						
-					
-				</ul>
-			</div>
-		</div>
-	</div>
+<ul id="index">
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="spatial.automaton_planning" href="automaton_planning.html">spatial.automaton_planning</a></code></li>
+<li><code><a title="spatial.geometry" href="geometry.html">spatial.geometry</a></code></li>
+<li><code><a title="spatial.logic" href="logic.html">spatial.logic</a></code></li>
+<li><code><a title="spatial.ltlf2dfa_nx" href="ltlf2dfa_nx.html">spatial.ltlf2dfa_nx</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
 </footer>
-
-  
-
-  
-<script src="https://kth-rpl-planiacs.github.io/SpaTiaL/js/main.js" defer></script>
-
-  <script src="https://kth-rpl-planiacs.github.io/SpaTiaL/plugins/elasticlunr.min.js" defer></script>
-  <script src="https://kth-rpl-planiacs.github.io/SpaTiaL/search_index.en.js" defer></script>
-  <script src="https://kth-rpl-planiacs.github.io/SpaTiaL/js/search.js" defer></script>
-
-  
 </body>
 </html>
