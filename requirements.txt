@@ -2,10 +2,9 @@ pybullet
 numpy
 matplotlib
 scipy
-open3d>=0.10.0
+open3d
 pupil-apriltags
 lark-parser
 ltlf2dfa
 networkx
 shapely
-pybullet
