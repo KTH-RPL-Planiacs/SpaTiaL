@@ -18,8 +18,8 @@ class TestAutomatonPlanning(unittest.TestCase):
         self.planner.reset_state()
 
         self.assertEqual(self.planner.temporal_formula, "(G(a)) & (F(b))")
-        self.assertEqual(len(self.planner.dfa.nodes), 4)
-        self.assertEqual(len(self.planner.dfa.edges), 9)
+        self.assertEqual(len(self.planner.dfa.nodes), 3)
+        self.assertEqual(len(self.planner.dfa.edges), 6)
 
     def test_trace_simulation(self):
         trace_ap = ['a', 'b']
@@ -35,7 +35,7 @@ class TestAutomatonPlanning(unittest.TestCase):
         trace_ap = ['a', 'b']  # uppercase required
         self.planner.reset_state()
         self.planner.dfa_step('10', trace_ap)  # initial observation
-        ex_target, ex_constraint = self.planner.plan_step()
+        ex_target, ex_constraint, edge = self.planner.plan_step()
         if self.planner.get_dfa_ap() == ['a', 'b']:
             self.assertEqual(ex_target, {'11'})
             self.assertEqual(ex_constraint, {'0X'})
@@ -46,11 +46,11 @@ class TestAutomatonPlanning(unittest.TestCase):
         # staying inside constraint for 5 times, nothing should change
         for i in range(5):
             self.planner.dfa_step('10', ['a', 'b'])
-            ex_target, ex_constraint = self.planner.plan_step()
+            ex_target, ex_constraint, edge = self.planner.plan_step()
             self.assertFalse(self.planner.currently_accepting())
 
         # satisfying target, automaton should accept
         self.planner.dfa_step('11', ['a', 'b'])
         self.assertTrue(self.planner.currently_accepting())
-        ex_target, ex_constraint = self.planner.plan_step()
+        ex_target, ex_constraint, edge = self.planner.plan_step()
         self.assertIsNone(ex_constraint)  # constraint and target is the same if we are in a goal state

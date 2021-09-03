@@ -13,7 +13,7 @@ class TestLTLf2nxParser(unittest.TestCase):
 
     def test_unsatisfiable(self):
         parser = LTLf2nxParser()
-        parser.parse_formula("G a & G !a")
+        parser.parse_formula("F (a & !a)")
         self.assertTrue("Formula is unsatisfiable" in parser.to_mona_output())
         self.assertIsNone(parser.to_nxgraph())
 
@@ -22,7 +22,7 @@ class TestLTLf2nxParser(unittest.TestCase):
         parser.parse_formula("G (a -> F b)")
         automaton = parser.to_nxgraph()
         self.assertIsNotNone(automaton)
-        self.assertEqual(len(automaton.nodes), 3)
-        self.assertEqual(len(automaton.edges), 6)
+        self.assertEqual(len(automaton.nodes), 2)
+        self.assertEqual(len(automaton.edges), 4)
         self.assertEqual(len(automaton.graph['acc']), 1)
         self.assertEqual(len(automaton.graph['init']), 1)
