@@ -16,11 +16,7 @@ sudo apt install mona
     ```
     $ git clone https://github.com/KTH-RPL-Planiacs/SpaTiaL.git
     ```
-2. Before installing the required dependencies, you may want to create a virtual environment and activate it:
-    ```
-    $ virtualenv env
-    $ source env/bin/activate
-    ```
+2. Before installing the required dependencies, you may want to create a virtual environment and activate it
 3. Install the dependencies necessary to run and test the code:
     ```
     $ pip install -r requirements.txt
