@@ -1,5 +1,7 @@
 # SpaTiaL
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/KTH-RPL-Planiacs/SpaTiaL/Python%20application?style=for-the-badge)
+
 SpaTiaL is a framework to specify spatial and temporal relations between objects.
 
 ## Installation
