@@ -432,7 +432,7 @@ class Polygon(object):
         Returns: Geometric center of the polygon as a numpy array
 
         """
-        return np.array(self.shape.centroid)
+        return np.array(self.shape.centroid.coords[0])
 
     def enlarge(self, radius: float) -> 'Polygon':
         enlarged = self.shape.buffer(radius)
@@ -596,7 +596,7 @@ class Circle(Polygon):
 
     def __init__(self, center: np.ndarray, r: float):
         # approximate circle
-        vertices = np.array(sh.Point(center).buffer(r).exterior)
+        vertices = np.array(sh.Point(center).buffer(r).exterior.coords)
         super().__init__(vertices, convex_hull=False)
 
 

@@ -1,6 +1,6 @@
 # SpaTiaL
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/KTH-RPL-Planiacs/SpaTiaL/Python%20application?style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/KTH-RPL-Planiacs/SpaTiaL/python-app.yml?branch=main&style=for-the-badge)
 
 SpaTiaL is a framework to specify spatial and temporal relations between objects.
 
@@ -12,16 +12,17 @@ Check the website for installation instructions or try to install with apt.
 sudo apt install mona
 ```
 
-### From Source
-
 1. Clone the repository:
     ```
     $ git clone https://github.com/KTH-RPL-Planiacs/SpaTiaL.git
     ```
-2. Before installing the required dependencies, you may want to create a virtual environment and activate it
-3. Install the dependencies necessary to run and test the code:
+2. TODO: We use poetry
     ```
-    $ pip install -r requirements.txt
+    poetry install
+    ```
+3. Run unit tests
+    ```
+    poetry run python -m unittest discover
     ```
 
 ## Repository Structure
