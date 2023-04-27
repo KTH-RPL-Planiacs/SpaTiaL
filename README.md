@@ -12,15 +12,16 @@ Check the website for installation instructions or try to install with apt.
 sudo apt install mona
 ```
 
-1. Clone the repository:
+1. Clone the repository and navigate into it:
     ```
     $ git clone https://github.com/KTH-RPL-Planiacs/SpaTiaL.git
+    cd SpaTiaL
     ```
-2. TODO: We use poetry
+2. This project uses [poetry](https://python-poetry.org/) to handle dependencies. Please make sure you have poetry installed and run:
     ```
     poetry install
     ```
-3. Run unit tests
+3. Try running the unit tests to see if everything works:
     ```
     poetry run python -m unittest discover
     ```
