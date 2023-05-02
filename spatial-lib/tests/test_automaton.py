@@ -1,7 +1,7 @@
 import unittest
 
-from spatial.automaton_planning import AutomatonPlanner
-from spatial.logic import Spatial
+from spatial_spec.automaton_planning import AutomatonPlanner
+from spatial_spec.logic import Spatial
 
 
 class TestAutomatonPlanning(unittest.TestCase):
