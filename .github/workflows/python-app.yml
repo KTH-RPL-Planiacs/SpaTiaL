@@ -10,14 +10,13 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    working-directory: ./spatial-lib
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
           python-version: 3.11
 
-      - run: cd spatial-lib
-      
       - name: cache poetry install
         uses: actions/cache@v2
         with:
