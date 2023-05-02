@@ -4,8 +4,6 @@
 
 SpaTiaL is a framework to specify spatial and temporal relations between objects.
 
-🚧 **ONGOING CONSTRUCTION WORK - experiments temporarily broken** 🚧
-
 ## Installation
 
 We use [MONA](http://www.brics.dk/mona/) to convert LTLf formulae to DFA. If you want to use the automaton-based planning, install it first.

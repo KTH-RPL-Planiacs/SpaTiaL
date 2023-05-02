@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.scripts]
 planning_grasp = "experiments.planning_grasp:main"
+planning_push = "experiments.planning_push:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"

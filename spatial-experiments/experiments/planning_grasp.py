@@ -212,6 +212,7 @@ def get_relevant_objects(targets, dfa_ap, spat_vars):
 
 def main():
     # spatial interpreter
+    global spatial
     spatial = Spatial(quantitative=True)
     # automaton-based planner
     planner = AutomatonPlanner()
@@ -237,7 +238,11 @@ def main():
     y_range = [-max_ray, max_ray]
 
     # gradient grid mesh
+    global rx
+    global ry
     rx, ry = np.arange(x_range[0], x_range[1], step_size), np.arange(y_range[0], y_range[1], step_size)
+    global gx
+    global gy
     gx, gy = np.meshgrid(rx, ry)
 
     # statistics
@@ -319,7 +324,7 @@ def main():
 
     # load robot and object in the chosen pose
     print("Initializing Simulation... \n")
-    sim.reset(get_positions(graspable_objects), get_orientation(graspable_objects), "../urdf")
+    sim.reset(get_positions(graspable_objects), get_orientation(graspable_objects), "./urdf")
 
     # planning loop
     while not planner.currently_accepting():

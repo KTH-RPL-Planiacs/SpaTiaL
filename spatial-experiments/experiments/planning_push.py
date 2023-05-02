@@ -476,9 +476,9 @@ def plot_path(v_2d, obj_list, path_to_plot, start, goal_cand, plot_path=False, n
         plt.savefig(name + '.svg')
     plt.show()
 
-
-if __name__ == '__main__':
+def main():
     # spatial interpreter
+    global spatial
     spatial = Spatial(quantitative=True)
     # automaton-based planner
     planner = AutomatonPlanner()
@@ -507,7 +507,11 @@ if __name__ == '__main__':
     y_range = [minY, maxY]
 
     # gradient grid mesh
+    global rx
+    global ry
     rx, ry = np.arange(x_range[0], x_range[1], step_size), np.arange(y_range[0], y_range[1], step_size)
+    global gx
+    global gy
     gx, gy = np.meshgrid(rx, ry)
 
     # object initialization
@@ -541,7 +545,7 @@ if __name__ == '__main__':
               pushable_objects[0].ori,
               pushable_objects[1].ori,
               pushable_objects[2].ori,
-              folder_path="../urdf")
+              folder_path="./urdf")
 
     # get actual positions from the simulation ??? and update angles
     POS, OR, ANG = update_pose(sim._get_state())
@@ -671,3 +675,7 @@ if __name__ == '__main__':
     print("Algorithm terminated. Specification satisfied:", planner.currently_accepting())
     # we are done, close the simulator
     sim.close()
+
+
+if __name__ == '__main__':
+    main()
