@@ -21,7 +21,8 @@ The experiments use [poetry](https://python-poetry.org/) to handle dependencies.
 Clone the repository and install dependencies:
 ```shell
 git clone https://github.com/KTH-RPL-Planiacs/SpaTiaL.git
-cd SpaTiaL/experiments
+cd SpaTiaL
+cd spatial-experiments
 poetry install
 ```
 
@@ -37,6 +38,6 @@ poetry run planning_grasp
 
 ## Repository Structure
 
-- [spatial-lib](./spatial): source code for the library itself
-- [spatial-experiments](./experiments): scripts to reproduce the experiments presented in our article
-- [docs](./docs): Generated docs (outdated)
+- [spatial-lib](./spatial-lib): source code for the library itself
+- [spatial-experiments](./spatial-experiments): scripts to reproduce the experiments presented in our article
+- [docs](./docs): Generated docs
