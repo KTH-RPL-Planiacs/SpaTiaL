@@ -17,7 +17,7 @@ sudo apt install mona
 
 ## Reproducing Paper Results
 
-The experiments use [poetry](https://python-poetry.org/) to handle dependencies. Please make sure you have poetry installed.
+The experiments use [poetry](https://python-poetry.org/) to handle dependencies. Please make sure you have poetry and MONA installed.
 Clone the repository and install dependencies:
 ```shell
 git clone https://github.com/KTH-RPL-Planiacs/SpaTiaL.git
