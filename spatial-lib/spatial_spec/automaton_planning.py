@@ -2,8 +2,8 @@ from copy import deepcopy
 
 import networkx as nx
 
-from spatial.logic import Spatial
-from spatial.ltlf2dfa_nx import LTLf2nxParser
+from spatial_spec.logic import Spatial
+from spatial_spec.ltlf2dfa_nx import LTLf2nxParser
 
 
 def number_to_base(n, b):

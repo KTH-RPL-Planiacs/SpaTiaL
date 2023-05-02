@@ -2,8 +2,8 @@ import unittest
 
 import numpy as np
 
-from spatial.geometry import PolygonCollection, SpatialInterface, Circle, ObjectInTime
-from spatial.logic import Spatial
+from spatial_spec.geometry import PolygonCollection, SpatialInterface, Circle, ObjectInTime
+from spatial_spec.logic import Spatial
 
 
 class RightMovingDummyObject(ObjectInTime):

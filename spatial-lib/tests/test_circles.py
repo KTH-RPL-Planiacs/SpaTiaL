@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from spatial.geometry import Circle, PolygonCollection
+from spatial_spec.geometry import Circle, PolygonCollection
 
 
 def to_bool(val: float) -> bool:

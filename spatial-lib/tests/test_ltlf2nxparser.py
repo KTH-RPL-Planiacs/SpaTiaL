@@ -1,6 +1,6 @@
 import unittest
 
-from spatial.ltlf2dfa_nx import LTLf2nxParser
+from spatial_spec.ltlf2dfa_nx import LTLf2nxParser
 
 
 class TestLTLf2nxParser(unittest.TestCase):

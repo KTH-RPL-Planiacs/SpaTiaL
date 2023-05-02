@@ -8,7 +8,7 @@ from lark import Lark, Transformer, Tree, v_args
 from lark.tree import pydot__tree_to_graph
 from lark.visitors import Interpreter
 
-from spatial.geometry import SpatialInterface, ObjectInTime
+from spatial_spec.geometry import SpatialInterface, ObjectInTime
 
 
 @v_args(inline=True)  # Affects the signatures of the methods

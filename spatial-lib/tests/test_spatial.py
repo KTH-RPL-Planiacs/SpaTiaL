@@ -2,8 +2,8 @@ import unittest
 
 import numpy as np
 
-from spatial.geometry import Circle, Polygon, PolygonCollection, StaticObject, DynamicObject
-from spatial.logic import Spatial
+from spatial_spec.geometry import Circle, Polygon, PolygonCollection, StaticObject, DynamicObject
+from spatial_spec.logic import Spatial
 
 
 class TestSpatialCircles(unittest.TestCase):

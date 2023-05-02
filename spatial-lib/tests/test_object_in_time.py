@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from spatial.geometry import StaticObject, DynamicObject, ObjectCollection, PolygonCollection, Polygon, Circle
+from spatial_spec.geometry import StaticObject, DynamicObject, ObjectCollection, PolygonCollection, Polygon, Circle
 
 
 class TestStaticObject(unittest.TestCase):
