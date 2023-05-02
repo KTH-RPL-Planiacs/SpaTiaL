@@ -15,7 +15,7 @@ sudo apt install mona
 
 1. Clone the repository and navigate into it:
     ```
-    $ git clone https://github.com/KTH-RPL-Planiacs/SpaTiaL.git
+    git clone https://github.com/KTH-RPL-Planiacs/SpaTiaL.git
     cd SpaTiaL
     cd spatial-lib
     ```
