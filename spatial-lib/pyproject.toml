@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "spatial"
+name = "spatial-specs"
 version = "0.1.0"
 description = ""
 authors = ["Georg Schuppe <georg.schuppe@gmail.com>", "Christian Pek <pek2@kth.se>"]
