@@ -16,6 +16,8 @@ jobs:
         with:
           python-version: 3.11
 
+      - run: cd spatial-lib
+      
       - name: cache poetry install
         uses: actions/cache@v2
         with:
