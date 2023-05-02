@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "experiments"
+version = "0.1.0"
+description = "Scripts to reproduce the results of the paper"
+authors = ["Georg Schuppe <georg.schuppe@gmail.com>"]
+license = "LICENSE"
+readme = "README.md"
+
+[tool.poetry.scripts]
+planning_grasp = "experiments.planning_grasp:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+spatial-spec = "^0.1.1"
+pybullet = "^3.2.5"
+matplotlib = "^3.7.1"
+numpy = "^1.24.3"
+lark = "^1.1.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
