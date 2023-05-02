@@ -10,7 +10,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    working-directory: ./spatial-lib
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -35,6 +34,8 @@ jobs:
         with:
           path: .venv
           key: pydeps-${{ hashFiles('**/poetry.lock') }}
+
+      - run: cd sptial-lib
 
       - run: poetry install --no-interaction --no-root
         if: steps.cache-deps.outputs.cache-hit != 'true'
